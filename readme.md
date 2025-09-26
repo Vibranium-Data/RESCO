@@ -2,12 +2,12 @@
 
 ## Introduction
 
-**Reduced Set City Ontology (RESCO)** is a **minimal yet extensible ontology** for urban data integration, supporting interoperability, reproducibility and system-wide monitoring across a variety of urban domains. RESCO emphasizes:
+**Reduced Set City Ontology (RESCO)** is a **minimal yet extensible ontology** for urban data integration, supporting interoperability, reusability, reproducibility, replicability and system-wide monitoring across a variety of urban domains. RESCO emphasizes:
 
 - **Simplicity**: a reduced set of interoperable classes that practitioners can readily adopt.
 - **Expressiveness**: enough semantic rigor to represent urban dynamics, not just static assets.
 - **Scalability**: adaptable to both data-rich and resource-constrained cities.
-- **Interoperability**: alignment with established standards (e.g., SOSA/SSN, NGSI-LD).
+- **Interoperability**: alignment with established standards (e.g. SOSA/SSN, NGSI-LD).
 
 ---
 
