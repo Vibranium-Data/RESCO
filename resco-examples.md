@@ -9,9 +9,12 @@ The following examples show RESCO's applicability across a variety of domains in
 ## Example: New York MTA - Subway
 
 Domain: Mobility
+
 Data source: [New York MTA GTFS Data](https://data.ny.gov/Transportation/MTA-General-Transit-Feed-Specification-GTFS-Static/fgm6-ccue/about_data)
 
 **Subway Trip as Event**
+
+Each subway trip is modeled as an Event, involving the train and the departure and arrival stations as entities.
 
 ```json
 {
@@ -33,6 +36,7 @@ Data source: [New York MTA GTFS Data](https://data.ny.gov/Transportation/MTA-Gen
 ```
 
 **Subway Departure Time and Arrival Time as Measurements**
+
 Departure Time and Arrival Times are emitted as Measurements by the train when it leaves its departure station and arrives at its arrival station.
 
 ```json
@@ -58,6 +62,7 @@ Departure Time and Arrival Times are emitted as Measurements by the train when i
 ```
 
 **Subway Trip Duration as an Indicator**
+
 The trip duration for a specific trip is derived from two _Measurements_: That particular trip's Arrival Time and Departure Time.
 
 ```json
@@ -76,6 +81,7 @@ The trip duration for a specific trip is derived from two _Measurements_: That p
 ```
 
 **Average Trip Duration for A Particular Trip From One Station to Another**
+
 To get a high-level indicator for average trip duration, we aggregate Trip Durations for that particular route.
 If we have 3 different trips from station 127 to A27, trip 1, trip 2 and trip 3, we average out their trip durations to model the average trip duration for trips from station 127 to A27.
 
@@ -95,6 +101,7 @@ If we have 3 different trips from station 127 to A27, trip 1, trip 2 and trip 3,
 ```
 
 **Subway Trip Status as a Condition**
+
 If we have expected arrival times included based on a subway schedule, we can also have trip statuses as Conditions.
 These could include trip statuses such as: _On Time_, _Early_, _Late_.
 Here, the Condition is based on a trip Event, indicated by the optional _derivedFrom_ property.
@@ -113,6 +120,7 @@ Here, the Condition is based on a trip Event, indicated by the optional _derived
 ```
 
 **Subway Trip Duration SLA as a Condition**
+
 We can model whether a trip arrived within its standard SLA, based on its Trip Duration Indicator.
 For this SLA, we condition options _SLA Met: Standard_, _SLA Met: Above Expectations_, _SLA Unmet: Below Expectations_.
 We can also add tags for quick filtering, say if there are different SLA Trackers across systems or organizations.
