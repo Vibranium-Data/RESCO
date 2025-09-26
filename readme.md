@@ -18,8 +18,8 @@ RESCO defines a small but powerful set of classes to represent infrastructure, o
 | **Class**        | **Definition**                                                                                                                                                    |
 | ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Entity**       | A generic object of interest in the city (e.g. bus, building, organization, power plant, traffic light, camera, individual)                                       |
-| **Measurement**  | A recorded value associated with an Entity (e.g., air quality index, traffic volume).                                                                             |
-| **Indicator**    | A derived or aggregated measure used for evaluation (e.g., % buses on time, average AQI).                                                                         |
+| **Measurement**  | A recorded value associated with an Entity (e.g. pm2.5 reading, voltage reading, temperature reading, car count, water level reading ).                           |
+| **Indicator**    | A derived or aggregated measure used for evaluation (e.g., % buses on time, air quality index, traffic volume, total grid load).                                  |
 | **Condition**    | A state or status of an entity, often qualitative (e.g., road is congested, plant is under maintenance, air quality sensor is functional, water quality is poor). |
 | **Event**        | A discrete occurrence emitted by or affecting entities, or their conditions (e.g. sensor reading, road maintenance, flood, traffic congestion, blackout).         |
 | **Intervention** | An action taken to influence system performance (e.g., deploying buses, adjusting water pumping, changing train schedule).                                        |
@@ -50,8 +50,8 @@ Sensors are treated as **Entities** that generate **Measurements**.
 Entities would have **entityType** as **"Sensor"**
 Examples of sensors include:
 
-- Environmental: Air quality sensor, weather station
-- Mobility: GPS unit on buses, traffic camera
+- Environmental: Air quality sensor, thermometer, weather station instrument(s)
+- Mobility: GPS unit on buses, traffic camera, lidar sensor
 - Utilities: Smart water meter, smart grid monitor
 
 **JSON-LD Example (Air Quality Sensor as a sensor):**
