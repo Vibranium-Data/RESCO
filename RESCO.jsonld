@@ -136,7 +136,7 @@
       "@id": "resco:generatedBy",
       "@type": "rdf:Property",
       "rdfs:domain": "resco:Measurement",
-      "rdfs:range": "resco:Sensor",
+      "rdfs:range": "resco:Entity",
       "rdfs:comment": "Links a measurement to the sensor that generated it."
     },
 
