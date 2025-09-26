@@ -15,14 +15,14 @@
 
 RESCO defines a small but powerful set of classes to represent infrastructure, observations, and interventions.
 
-| **Class**        | **Definition**                                                                                                                                                   |
-| ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Entity**       | A generic object of interest in the city (e.g. bus, building, organization, power plant, traffic light, camera, individual)                                      |
-| **Measurement**  | A recorded value associated with an Entity (e.g. pm2.5 reading, voltage reading, temperature reading, car count, water level reading ).                          |
-| **Indicator**    | A derived or aggregated measure used for evaluation (e.g. % buses on time, air quality index, traffic volume, total grid load).                                  |
-| **Condition**    | A state or status of an entity, often qualitative (e.g. road is congested, plant is under maintenance, air quality sensor is functional, water quality is poor). |
-| **Event**        | A discrete occurrence emitted by or affecting entities, or their conditions (e.g. sensor reading, road maintenance, flood, traffic congestion, blackout).        |
-| **Intervention** | An action taken to influence system performance (e.g. deploying buses, adjusting water pumping, updating train schedules, rerouting power transmission).         |
+| **Class**        | **Definition**                                                                                                                                                                            |
+| ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Entity**       | A generic object of interest in the city (e.g. bus, building, organization, power plant, traffic light, camera, individual)                                                               |
+| **Measurement**  | A recorded value associated with an Entity (e.g. pm2.5 reading, voltage reading, temperature reading, car count, water level reading ).                                                   |
+| **Indicator**    | A derived or aggregated measure used for evaluation (e.g. % buses on time, air quality index, traffic volume, total grid load).                                                           |
+| **Condition**    | A state or status of an entity or event, often qualitative (e.g. road is congested, plant is under maintenance, air quality sensor is functional, bus is on time, water quality is poor). |
+| **Event**        | A discrete occurrence emitted by or affecting entities, or their conditions (e.g. sensor reading, road maintenance, flood, traffic congestion, blackout).                                 |
+| **Intervention** | An action taken to influence system performance (e.g. deploying buses, adjusting water pumping, updating train schedules, rerouting power transmission).                                  |
 
 ---
 
@@ -35,7 +35,7 @@ RESCO defines a small but powerful set of classes to represent infrastructure, o
 
 2. **Open World Assumption (OWA)**
 
-   - Knowledge is not assumed complete: the ontology is extensible by practitioners, developers for their custom needs.
+   - Knowledge is not assumed complete: the ontology is extensible by practitioners such as developers, data scientists or researchers for their custom needs.
    - Useful for urban data integration, where datasets are fragmented and partial.
 
 3. **Alignment with Standards**
@@ -83,7 +83,7 @@ Examples of sensors include:
 {
   "@id": "resco:Condition/nyc-sensor-001-status",
   "@type": "resco:Condition",
-  "resco:conditionTag": "infrastructure",
+  "resco:conditionTag": "air quality infrastructure",
   "resco:conditionLabel": "Sensor operational status",
   "resco:conditionValue": "Operational",
   "resco:conditionOptions": [
