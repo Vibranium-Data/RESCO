@@ -137,7 +137,7 @@
       "@type": "rdf:Property",
       "rdfs:domain": "resco:Measurement",
       "rdfs:range": "resco:Entity",
-      "rdfs:comment": "Links a measurement to the sensor that generated it."
+      "rdfs:comment": "Links a measurement to the Entity that generated it."
     },
 
     {"_comment": "RESCO Indicator class properties"},
@@ -196,7 +196,7 @@
       "@type": "rdf:Property",
       "rdfs:domain": "resco:Condition",
       "rdfs:range": "xsd:string",
-      "rdfs:comment": "A human-readable label for the condition (e.g., 'Good', 'Poor', 'Functional')."
+      "rdfs:comment": "A human-readable label for the condition (e.g., 'Good', 'Poor', 'Functional', 'Under Maintenance')."
     },
     {
       "@id": "resco:appliesToEntity",
