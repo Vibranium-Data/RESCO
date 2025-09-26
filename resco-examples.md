@@ -80,7 +80,7 @@ The trip duration for a specific trip is derived from two _Measurements_: That p
 }
 ```
 
-**Average Trip Duration for A Particular Trip From One Station to Another**
+**Average Trip Duration for A Particular Route**
 
 To get a high-level indicator for average trip duration, we aggregate Trip Durations for that particular route.
 If we have 3 different trips from station 127 to A27, trip 1, trip 2 and trip 3, we average out their trip durations to model the average trip duration for trips from station 127 to A27.
