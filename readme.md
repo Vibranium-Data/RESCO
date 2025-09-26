@@ -85,7 +85,13 @@ Examples of sensors include:
   "@type": "resco:Condition",
   "resco:conditionTag": "infrastructure",
   "resco:conditionLabel": "Sensor operational status",
-  "resco:conditionValue": "Operational"
+  "resco:conditionValue": "Operational",
+  "resco:conditionOptions": [
+    "Operational",
+    "Under Maintenance",
+    "Not Responding",
+    "Offline"
+  ]
 }
 ```
 
