@@ -212,13 +212,23 @@
       "rdfs:range": "xsd:string",
       "rdfs:comment": "The value of the condition which is one of the conditionOptions."
     },
-    
     {
-      "@id": "resco:appliesToEntity",
+      "@id": "resco:derivedFrom",
       "@type": "rdf:Property",
       "rdfs:domain": "resco:Condition",
-      "rdfs:range": "resco:Entity",
-      "rdfs:comment": "The entity this condition applies to."
+      "rdfs:range": "xsd:string",
+      "rdfs:comment": "Optional: The Indicator(s) or Measurement(s) the Condition is derived from. Optional mirror for indicatesCondition."
+    },
+    
+    {
+      "@id": "resco:appliesTo",
+      "@type": "rdf:Property",
+      "rdfs:domain": "resco:Condition",
+      "rdfs:range": [
+                    "resco:Entity",
+                    "resco:Event"
+                    ],
+      "rdfs:comment": "The entity or event this condition applies to."
     },
     {
       "@id": "resco:conditionTag",
