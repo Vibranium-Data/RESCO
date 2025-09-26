@@ -196,8 +196,23 @@
       "@type": "rdf:Property",
       "rdfs:domain": "resco:Condition",
       "rdfs:range": "xsd:string",
-      "rdfs:comment": "A human-readable label for the condition (e.g., 'Good', 'Poor', 'Functional', 'Under Maintenance')."
+      "rdfs:comment": "An identifier with the name of the condition being described."
     },
+    {
+      "@id": "resco:conditionOptions",
+      "@type": "rdf:Property",
+      "rdfs:domain": "resco:Condition",
+      "rdfs:range": "xsd:string",
+      "rdfs:comment": "Human readable descriptors for the condition (e.g., 'Good', 'Poor', 'Functional', 'Under Maintenance')."
+    },
+    {
+      "@id": "resco:conditionValue",
+      "@type": "rdf:Property",
+      "rdfs:domain": "resco:Condition",
+      "rdfs:range": "xsd:string",
+      "rdfs:comment": "The value of the condition which is one of the conditionOptions."
+    },
+    
     {
       "@id": "resco:appliesToEntity",
       "@type": "rdf:Property",
