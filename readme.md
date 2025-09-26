@@ -15,14 +15,14 @@
 
 RESCO defines a small but powerful set of classes to represent infrastructure, observations, and interventions.
 
-| **Class**        | **Definition**                                                                                                                                                    |
-| ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Entity**       | A generic object of interest in the city (e.g. bus, building, organization, power plant, traffic light, camera, individual)                                       |
-| **Measurement**  | A recorded value associated with an Entity (e.g. pm2.5 reading, voltage reading, temperature reading, car count, water level reading ).                           |
-| **Indicator**    | A derived or aggregated measure used for evaluation (e.g., % buses on time, air quality index, traffic volume, total grid load).                                  |
-| **Condition**    | A state or status of an entity, often qualitative (e.g., road is congested, plant is under maintenance, air quality sensor is functional, water quality is poor). |
-| **Event**        | A discrete occurrence emitted by or affecting entities, or their conditions (e.g. sensor reading, road maintenance, flood, traffic congestion, blackout).         |
-| **Intervention** | An action taken to influence system performance (e.g., deploying buses, adjusting water pumping, changing train schedule).                                        |
+| **Class**        | **Definition**                                                                                                                                                   |
+| ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Entity**       | A generic object of interest in the city (e.g. bus, building, organization, power plant, traffic light, camera, individual)                                      |
+| **Measurement**  | A recorded value associated with an Entity (e.g. pm2.5 reading, voltage reading, temperature reading, car count, water level reading ).                          |
+| **Indicator**    | A derived or aggregated measure used for evaluation (e.g. % buses on time, air quality index, traffic volume, total grid load).                                  |
+| **Condition**    | A state or status of an entity, often qualitative (e.g. road is congested, plant is under maintenance, air quality sensor is functional, water quality is poor). |
+| **Event**        | A discrete occurrence emitted by or affecting entities, or their conditions (e.g. sensor reading, road maintenance, flood, traffic congestion, blackout).        |
+| **Intervention** | An action taken to influence system performance (e.g. deploying buses, adjusting water pumping, updating train schedules, rerouting power transmission).         |
 
 ---
 
