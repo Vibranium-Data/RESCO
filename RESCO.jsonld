@@ -84,6 +84,16 @@
       "rdfs:range": "xsd:string",
       "rdfs:comment": "Arbitrary labels for filtering or grouping entities."
     },
+    {
+      "@id": "resco:hasMeasurement",
+      "@type": "rdf:Property",
+      "rdfs:domain": [
+                    "resco:Entity",
+                    "resco:Event"
+                     ],
+      "rdfs:range": "resco:Measurement",
+      "rdfs:comment": "Associates an entity with measurements it generates or is described by."
+    },
 
 
     {"_comment": "RESCO Measurement class properties"},
@@ -95,14 +105,6 @@
       "rdfs:domain": "resco:Measurement",
       "rdfs:range": "xsd:string",
       "rdfs:comment": "Unique identifier for the measurement"
-    },
-
-    {
-      "@id": "resco:hasMeasurement",
-      "@type": "rdf:Property",
-      "rdfs:domain": "resco:Entity",
-      "rdfs:range": "resco:Measurement",
-      "rdfs:comment": "Associates an entity with measurements it generates or is described by."
     },
      {
       "@id": "resco:measurementLabel",
