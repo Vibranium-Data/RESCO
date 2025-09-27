@@ -33,6 +33,7 @@ The data source reports the volume of water stored in millions of liters, so we 
 ```
 
 **Dam Condition**
+
 We can model the dam's condition to monitor infrastructure and schedule maintenance across the water supply system.
 
 ```json
@@ -48,6 +49,7 @@ We can model the dam's condition to monitor infrastructure and schedule maintena
 ```
 
 **Dam Storage with Quantitative Indicators**
+
 If we have a Measurement for the dam's total capacity (i.e. the total volume the dam can hold) as compared to its current level, we can generate an Indicator of the dam's current % storage.
 
 ```json
