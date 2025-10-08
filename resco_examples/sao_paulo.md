@@ -16,7 +16,7 @@ Each power is modeled as an Entity. Here, we have each dam associated with an en
     "resco": "https://www.github.com/vibranium-data/resco",
     "schema": "http://schema.org/"
   },
-  "@id": "resco:Entity/angra-ii-002",
+  "@id": "resco:Entity/angra-ii-005",
   "@type": "resco:Entity",
   "resco:entityType": "Power Plant",
   "resco:entityTag": "Nuclear"
@@ -28,5 +28,21 @@ Each power is modeled as an Entity. Here, we have each dam associated with an en
     "resco:measurementUnit": "megawatts",
     "resco:measurementTimestamp": "2025-09-22T05:00:00Z"
   }
+}
+```
+
+**Power Plant Condition**
+
+We can model the power plant's condition to monitor infrastructure and schedule maintenance across the grid.
+
+```json
+{
+  "@id": "resco:Condition/angra-ii-005-status",
+  "@type": "resco:Condition",
+  "resco:conditionTag": "Energy Infrastructure",
+  "resco:conditionLabel": "Power Plant operational status",
+  "resco:conditionValue": "Operational",
+  "resco:conditionOptions": ["Operational", "Under Maintenance", "Closed"],
+  "resco:appliesTo": "Entity/angra-ii-005"
 }
 ```
