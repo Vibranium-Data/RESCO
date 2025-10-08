@@ -46,3 +46,18 @@ We can model the power plant's condition to monitor infrastructure and schedule 
   "resco:appliesTo": "Entity/angra-ii-005"
 }
 ```
+
+**Grid Supply with Quantitative Indicators**
+
+If we have a Measurement for the power plant's daily energy supply, say taken by plant meters hour by hour, we can aggregate these hourly meter readings to generate a daily average energy supply Indicator. We can model the verified daily average energy supply for Angra II power plant as shown in the data source in RESCO as shown below.
+
+```json
+{
+  "@id": "resco:Indicator/angra-ii-005-daily-average-power-supply",
+  "@type": "resco:Indicator",
+  "resco:indicatorType": "Average Power Supply, Daily",
+  "resco:indicatorValue": 1361.0,
+  "resco:indicatorUnit": "MW",
+  "resco:indicatesCondition": "resco:Condition/angra-ii-005-daily-average-power-supply"
+}
+```
