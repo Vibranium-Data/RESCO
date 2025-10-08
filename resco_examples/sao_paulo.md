@@ -19,15 +19,28 @@ Each power is modeled as an Entity. Here, we have each dam associated with an en
   "@id": "resco:Entity/angra-ii-005",
   "@type": "resco:Entity",
   "resco:entityType": "Power Plant",
-  "resco:entityTag": "Nuclear"
+  "resco:entityTag": "Nuclear",
   "resco:hasMeasurement": {
-    "@id": "resco:Measurement/angra-ii-002",
+    "@id": "resco:Measurement/angra-ii-002-available-power",
     "@type": "resco:Measurement",
     "resco:measurementLabel": "Available Power Capacity (MW)",
     "resco:measurementValue": 1350.0,
     "resco:measurementUnit": "megawatts",
     "resco:measurementTimestamp": "2025-09-22T05:00:00Z"
   }
+}
+```
+
+We can also have a Measurement of the installed power capacity, which is the power capacity the plant was installed to produce (vs what is actually made available).
+
+```json
+{
+  "@id": "resco:Measurement/angra-ii-002-installed-power",
+  "@type": "resco:Measurement",
+  "resco:measurementLabel": "Installed Power Capacity (MW)",
+  "resco:measurementValue": 1350.0,
+  "resco:measurementUnit": "megawatts",
+  "resco:measurementTimestamp": "2025-09-22T05:00:00Z"
 }
 ```
 
