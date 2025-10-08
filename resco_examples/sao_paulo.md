@@ -161,3 +161,27 @@ We can extend similar Measurements and Indicators to every power plant supplying
   "resco:indicatesCondition": "resco:Condition/sudeste_centro_oeste_daily-avg-power-supply-SLA"
 }
 ```
+
+Upon similarly aggregating the average daily scheduled power supply, we can also then aggregate indicators for the Scheduled vs Verified Average Daily Power Supply for the entire grid subsystem for the Sudeste Centro Oeste region. This could then inform a Condition for the service-level agreements (SLAs) at the utility, city or region level on whether the grid subsystem is supplying the expected power. If this is not the case, it would be possible to identify which power plants need improvement, perhaps for maintenance or even checking whether their meters are in good condition and reporting the correct values.
+
+**Conditions informing City, Utility or Organization Response**
+
+With verified daily average power supply across the region's grid, we can track the daily power supply service level agreement (SLA) as a Condition, using the condition to inform decision-making at the regional level, or within a city, utility or other organization for the grid's power supply.
+
+```json
+{
+  "@id": "resco:Condition/sudeste_centro_oeste_daily-avg-power-supply-SLA",
+  "@type": "resco:Condition",
+  "resco:conditionLabel": "Sudeste/Centro-Oeste Daily Power Supply SLA",
+  "resco:conditionValue": "Power Supply Quality, Daily Average SLA",
+  "resco:conditionOptions": [
+    "Power Supply Agreement Met - Above Expectations",
+    "Power Supply Agreement Met - Standard",
+    "Power Supply Agreement Unmet",
+    "Power Supply Agreement Unmet - Exploration Recommended"
+  ],
+  "resco:conditionTag": "Daily Power Supply SLA",
+  "resco:appliesTo": "resco:Entity/sudeste_centro_oeste_grid-system",
+  "resco:derivedFrom": "resco:Indicator/sudeste-centro-oeste-avg-daily-power-supply-scheduled-vs-verified"
+}
+```
