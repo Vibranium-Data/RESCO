@@ -66,12 +66,12 @@ If we have a Measurement for the power plant's daily energy supply, say taken by
 
 ```json
 {
-  "@id": "resco:Indicator/angra-ii-005-verified-daily-average-power-supply",
+  "@id": "resco:Indicator/angra-ii-005-verified-daily-avg-power-supply",
   "@type": "resco:Indicator",
   "resco:indicatorType": "Average Power Supply, Daily Verified",
   "resco:indicatorValue": 1361.0,
   "resco:indicatorUnit": "MW",
-  "resco:indicatesCondition": "resco:Condition/angra-ii-005-daily-average-power-supply-SLA"
+  "resco:indicatesCondition": "resco:Condition/angra-ii-005-daily-avg-power-supply-SLA"
 }
 ```
 
@@ -79,11 +79,35 @@ We can also model the scheduled or expected daily average, according to either S
 
 ```json
 {
-  "@id": "resco:Indicator/angra-ii-005-scheduled-daily-average-power-supply",
+  "@id": "resco:Indicator/angra-ii-005-scheduled-daily-avg-power-supply",
   "@type": "resco:Indicator",
   "resco:indicatorType": "Average Power Supply, Daily Scheduled",
   "resco:indicatorValue": 1350.0,
-  "resco:indicatorUnit": "MW",
-  "resco:indicatesCondition": "resco:Condition/angra-ii-005-daily-average-power-supply-SLA"
+  "resco:indicatorUnit": "MW"
+}
+```
+
+We can use these two Indicators to model another Indicator which tells us by how much the scheduled vs verified power supply varied, either in raw (absolute) values or in percentage, as shown in the data source.
+Average vs Verified power supply in absolute values
+
+```json
+{
+  "@id": "resco:Indicator/angra-ii-005-avg-daily-power-supply-scheduled-vs-verified",
+  "@type": "resco:Indicator",
+  "resco:indicatorType": "Average Power Supply, Daily Scheduled vs Verified",
+  "resco:indicatorValue": 11,
+  "resco:indicatorUnit": "MW"
+}
+```
+
+Average vs Verified power supply in percentage
+
+```json
+{
+  "@id": "resco:Indicator/angra-ii-005-avg-daily-power-supply-scheduled-vs-verified",
+  "@type": "resco:Indicator",
+  "resco:indicatorType": "Average Power Supply, Daily Scheduled vs Verified",
+  "resco:indicatorValue": 1.0,
+  "resco:indicatorUnit": "%"
 }
 ```
