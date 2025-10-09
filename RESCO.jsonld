@@ -265,7 +265,7 @@
       "rdfs:comment": "Timestamp of the event."
     },
     {
-      "@id": "resco:generatedByEvent",
+      "@id": "resco:generatedBy",
       "@type": "rdf:Property",
       "rdfs:domain": "resco:Event",
       "rdfs:range": "resco:Entity",

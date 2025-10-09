@@ -210,11 +210,11 @@ We can log these load requests and over the course of the day, aggregate them ac
   "@id": "resco:Event/peak-demand-2025-09-22",
   "@type": "resco:Event",
   "resco:eventType": "PeakDemand",
-  "resco:eventTime": "2025-09-22T19:00:00Z",
+  "resco:eventTime": "2025-09-22T10:46:00Z",
   "resco:involvedEntity": [
     "resco:Entity/sudeste_centro_oeste_grid-system",
     "resco:Entity/ONS"
   ],
-  "resco:generatedByEvent": "resco:Entity/sudeste_centro_oeste_grid-system"
+  "resco:generatedBy": "resco:Entity/sudeste_centro_oeste_grid-system"
 }
 ```
