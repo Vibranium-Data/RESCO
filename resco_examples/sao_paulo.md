@@ -203,7 +203,7 @@ As the grid gets different requests for energy as people turn appliances on and 
 }
 ```
 
-We can log these load requests and over the course of the day, aggregate them. We can then model the moment during the day when peak demand occurred as an Event. An example of a peak demand event can be as follows:
+We can log these load requests and over the course of the day, aggregate them across the grid. We can then model the moment during the day when peak demand occurred across the grid as an Event. An example of a peak demand event can be as follows:
 
 ```json
 {
@@ -211,7 +211,10 @@ We can log these load requests and over the course of the day, aggregate them. W
   "@type": "resco:Event",
   "resco:eventType": "PeakDemand",
   "resco:eventTime": "2025-09-22T19:00:00Z",
-  "resco:involvedEntity": "resco:Entity/sao-paulo-grid",
-  "resco:generatedByEvent": "resco:Entity/ons"
+  "resco:involvedEntity": [
+    "resco:Entity/sudeste_centro_oeste_grid-system",
+    "resco:Entity/ONS"
+  ],
+  "resco:generatedByEvent": "resco:Entity/sudeste_centro_oeste_grid-system"
 }
 ```
