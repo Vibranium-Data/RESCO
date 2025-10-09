@@ -243,6 +243,32 @@ Alternatively, we can also model peak demand as a Measurement and generate its a
 }
 ```
 
+**Grid Stability Status as Conditions**
+
+We can model grid supply and grid demand as Measurements, using these measurements for grid supply and grid demand, we can generate an Indicator that reports whether the grid's supply and demand are balanced, which informs us about grid stability.
+
+```json
+{
+  "@id": "resco:Measurement/sudeste-centro-oeste-grid-demand-2025-09-22",
+  "@type": "resco:Measurement",
+  "resco:measurementLabel": "Grid Demand Sudeste Centro Oeste (MW)",
+  "resco:measurementValue": 51.896,
+  "resco:measurementUnit": "megawatts",
+  "resco:measurementTimestamp": "2025-09-22T10:30:00Z"
+}
+```
+
+```json
+{
+  "@id": "resco:Measurement/sudeste-centro-oeste-grid-supply-2025-09-22",
+  "@type": "resco:Measurement",
+  "resco:measurementLabel": "Grid Supply Sudeste Centro Oeste (MW)",
+  "resco:measurementValue": 235.213,
+  "resco:measurementUnit": "megawatts",
+  "resco:measurementTimestamp": "2025-09-22T10:30:00Z"
+}
+```
+
 **Interventions to Stabilize Grid Load**
 
 Depending on peak demand across the grid, operators might need to take actions to improve grid stability. We can model these actions as Interventions. Examples of Interventions in this case could include increasing hydro discharge at a hydroelectric plant, rerouting imports from another subsystem, activating inactive thermal plants to meet demand peaks, or other Interventions as needed.
