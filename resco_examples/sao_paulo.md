@@ -187,7 +187,7 @@ With verified daily average power supply across the region's grid, we can track 
 ```
 
 **Energy Transmission as Events**
-As the grid gets different requests for energy as people turn appliances on and off, these can be modeled as Events, associated with a utility user, such as a household or factory with an account within a utility. Here, the load request to the grid is shown to be from the utility Enel Distribuição São Paulo.
+As the grid gets different requests for energy as people turn appliances on and off, these can be modeled as Events, associated with a utility user, such as a household or factory with an account within a utility. Here, the load request to the grid is shown to be from the utility Enel Distribuição São Paulo. We can have more than one involvedEntity during an Event. Here, we show both the grid in Sao Paulo specifically and the regional grid used in ONS data.
 
 ```json
 {
@@ -195,7 +195,10 @@ As the grid gets different requests for energy as people turn appliances on and 
   "@type": "resco:Event",
   "resco:eventType": "load request",
   "resco:eventTime": "2025-09-22T10:30:00Z",
-  "resco:involvedEntity": "resco:Entity/sao-paulo-grid",
+  "resco:involvedEntity": [
+    "resco:Entity/sao-paulo-grid",
+    "resco:Entity/sudeste_centro_oeste_grid-system"
+  ],
   "resco:generatedBy": "resco:Entity/enel-sao-paulo-004-005"
 }
 ```
