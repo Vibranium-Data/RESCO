@@ -308,7 +308,7 @@ We model an Intervention to increase the hydro discharge below, until power gene
   "@id": "resco:Intervention/hydro-discharge-adjustment",
   "@type": "resco:Intervention",
   "resco:interventionLabel": "Hydroelectric dispatch adjustment",
-  "resco:implementedBy": "resco:Entity/ons",
+  "resco:implementedBy": "resco:Entity/ONS",
   "resco:appliesTo": "resco:Entity/itaipu-plant",
   "resco:basedOnIndicator": "resco:Indicator/sudeste-centro-oeste-peak-demand-2025-09-22",
   "resco:currentEntityCondition": "resco:Condition/hydro-low-reservoir",
@@ -316,5 +316,23 @@ We model an Intervention to increase the hydro discharge below, until power gene
   "resco:interventionStartTime": "2025-09-22T19:10:00Z",
   "resco:interventionEndTime": "2025-09-22T20:00:00Z",
   "resco:interventionOutcome": "Generation increased to 9600 MW"
+}
+```
+
+Here's another example of an Intervention, this time to reroute transmission from the Southeast / Central region where Sao Paulo is located to the national grid (National Interconnected System) for redistribution to the North East subregion.
+
+```json
+{
+  "@id": "resco:Intervention/transmission-rerouting-southeast",
+  "@type": "resco:Intervention",
+  "resco:interventionLabel": "Transmission rerouting to balance regional load",
+  "resco:implementedBy": "resco:Entity/ONS",
+  "resco:appliesTo": "resco:Entity/sudeste-centro-oeste-grid-system",
+  "resco:basedOnIndicator": "resco:Indicator/sudeste-centro-oeste-grid-balance-2025-09-22",
+  "resco:currentEntityCondition": "resco:Condition/nordeste-grid-balance-overload",
+  "resco:targetEntityCondition": "resco:Condition/northeast-demand-balanced",
+  "resco:interventionStartTime": "2025-09-22T21:00:00Z",
+  "resco:interventionEndTime": "2025-09-22T22:00:00Z",
+  "resco:interventionOutcome": "Excess generation of 100 MW rerouted from Southeast subsystem to Northeast subsystem via NIS Interconnection 2."
 }
 ```
