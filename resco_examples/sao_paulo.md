@@ -243,9 +243,9 @@ Alternatively, we can also model peak demand as a Measurement and generate its a
 }
 ```
 
-**Grid Stability Status as Conditions**
+**Grid Stability Status**
 
-We can model grid supply and grid demand as Measurements, using these measurements for grid supply and grid demand, we can generate an Indicator that reports whether the grid's supply and demand are balanced, which informs us about grid stability.
+We can model grid supply and grid demand as Measurements.
 
 ```json
 {
@@ -266,6 +266,34 @@ We can model grid supply and grid demand as Measurements, using these measuremen
   "resco:measurementValue": 235.213,
   "resco:measurementUnit": "megawatts",
   "resco:measurementTimestamp": "2025-09-22T10:30:00Z"
+}
+```
+
+Using these measurements for grid supply and grid demand, we can generate an Indicator that reports whether the grid's supply and demand are balanced, which informs us about grid stability.
+
+```json
+{
+  "@id": "resco:Indicator/sudeste-centro-oeste-grid-balance-2025-09-22",
+  "@type": "resco:Indicator",
+  "resco:indicatorLabel": "Grid Supply–Demand Balance Sudeste Centro Oeste (MW)",
+  "resco:indicatorValue": 183.317,
+  "resco:indicatorUnit": "MW",
+  "resco:basedOnMeasurement": [
+    "resco:Measurement/sudeste-centro-oeste-grid-demand-2025-09-22",
+    "resco:Measurement/sudeste-centro-oeste-grid-supply-2025-09-22"
+  ],
+  "resco:indicatesCondition": "resco:Condition/sudeste-centro-oeste-grid-stability"
+}
+```
+
+We can then use the grid balance Indicator to generate a Condition which informs ONS, utilities and city leadership about grid stability in the region.
+
+```json
+{
+  "@id": "resco:Condition/sudeste-centro-oeste-grid-stability",
+  "@type": "resco:Condition",
+  "resco:conditionLabel": "Grid equilibrium",
+  "resco:conditionValue": "Stable"
 }
 ```
 
