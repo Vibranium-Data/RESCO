@@ -187,6 +187,7 @@ With verified daily average power supply across the region's grid, we can track 
 ```
 
 **Energy Transmission as Events**
+
 As the grid gets different requests for energy as people turn appliances on and off, these can be modeled as Events, associated with a utility user, such as a household or factory with an account within a utility. Here, the load request to the grid is shown to be from the utility Enel Distribuição São Paulo. We can have more than one involvedEntity during an Event. Here, we show both the grid in Sao Paulo specifically and the regional grid used in ONS data.
 
 ```json
@@ -216,5 +217,50 @@ We can log these load requests and over the course of the day, aggregate them ac
     "resco:Entity/ONS"
   ],
   "resco:generatedBy": "resco:Entity/sudeste_centro_oeste_grid-system"
+}
+```
+
+Alternatively, we can also model peak demand as a Measurement and generate its associated Indicator.
+
+```json
+{
+  "@id": "resco:Measurement/sudeste-centro-oeste-grid-demand-2025-09-22",
+  "@type": "resco:Measurement",
+  "resco:measurementLabel": "Grid Demand Sudeste Centro Oeste (MW)",
+  "resco:measurementValue": 51.896,
+  "resco:measurementUnit": "megawatts",
+  "resco:measurementTimestamp": "2025-09-22T10:30:00Z"
+}
+```
+
+```json
+{
+  "@id": "resco:Indicator/sudeste-centro-oeste-peak-demand-2025-09-22",
+  "@type": "resco:Indicator",
+  "resco:indicatorType": "Peak Demand Sudeste Centro Oeste (MW)",
+  "resco:indicatorValue": 53.714,
+  "resco:indicatorUnit": "MW"
+}
+```
+
+**Interventions to Stabilize Grid Load**
+
+Depending on peak demand across the grid, operators might need to take actions to improve grid stability. We can model these actions as Interventions. Examples of Interventions in this case could include increasing hydro discharge at a hydroelectric plant, rerouting imports from another subsystem, activating inactive thermal plants to meet demand peaks, or other Interventions as needed.
+
+We model an Intervention to increase the hydro discharge below, until power generation reaches 9600 MW at the specified plant.
+
+```json
+{
+  "@id": "resco:Intervention/hydro-discharge-adjustment",
+  "@type": "resco:Intervention",
+  "resco:interventionLabel": "Hydroelectric dispatch adjustment",
+  "resco:implementedBy": "resco:Entity/ons",
+  "resco:appliesTo": "resco:Entity/itaipu-plant",
+  "resco:basedOnIndicator": "resco:Indicator/sudeste-centro-oeste-peak-demand-2025-09-22",
+  "resco:currentEntityCondition": "resco:Condition/hydro-low-reservoir",
+  "resco:targetEntityCondition": "resco:Condition/hydro-normal-reservoir",
+  "resco:interventionStartTime": "2025-09-22T19:10:00Z",
+  "resco:interventionEndTime": "2025-09-22T20:00:00Z",
+  "resco:interventionOutcome": "Generation increased to 9600 MW"
 }
 ```
