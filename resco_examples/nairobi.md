@@ -5,7 +5,7 @@ Domain: Climate / Environment
 Data source: [Sensors.Africa Air Quality Data](https://sensors.africa/air/city/nairobi)
 
 **Sensors as Entities**
-
+We model the air quality sensors in Nairobi's Central Business District (CBD) to generate PM10 air quality measurements at each CBD station.
 Sensors are treated as Entities with entityType as _"Sensor"_ that generate Measurements.
 
 ```json
@@ -18,7 +18,7 @@ Sensors are treated as Entities with entityType as _"Sensor"_ that generate Meas
   "@type": "resco:Entity",
   "resco:entityType": "AirQualitySensor",
   "resco:hasMeasurement": {
-    "@id": "resco:Measurement/nbo-sensor-000004849-pm10",
+    "@id": "resco:Measurement/nbo-cbd-sensor-000004849-pm10",
     "@type": "resco:Measurement",
     "resco:measurementLabel": "PM10 concentration (µg/m³)",
     "resco:measurementValue": 43.0,
@@ -32,7 +32,7 @@ Sensors are treated as Entities with entityType as _"Sensor"_ that generate Meas
 
 ```json
 {
-  "@id": "resco:Condition/nbo-sensor-000004849-status",
+  "@id": "resco:Condition/nbo-cbd-sensor-000004849-status",
   "@type": "resco:Condition",
   "resco:conditionTag": "air quality infrastructure",
   "resco:conditionLabel": "Sensor operational status",
@@ -50,12 +50,17 @@ Sensors are treated as Entities with entityType as _"Sensor"_ that generate Meas
 
 ```json
 {
-  "@id": "resco:Indicator/nbo-pm25-aqi",
+  "@id": "resco:Indicator/nbo-pm10-aqi",
   "@type": "resco:Indicator",
   "resco:indicatorType": "AirQualityIndex",
-  "resco:indicatorValue": 42,
+  "resco:indicatorValue": 38,
   "resco:indicatorUnit": "AQI",
-  "resco:indicatesCondition": "resco:Condition/nyc-pm25-quality"
+  "resco:indicatesCondition": "resco:Condition/nbo-pm10-quality",
+  "resco:basedOnMeasurement": [
+    "resco:resco:Measurement/nbo-sensor-000004849-pm10",
+    "resco:resco:Measurement/nbo-sensor-000000049-pm10",
+    "resco:resco:Measurement/nbo-sensor-000004980-pm10"
+  ]
 }
 ```
 
