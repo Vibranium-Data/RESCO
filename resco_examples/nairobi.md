@@ -48,9 +48,13 @@ Sensors are treated as Entities with entityType as _"Sensor"_ that generate Meas
 
 **Indicator Representation in RESCO (JSON-LD)**
 
+We aggregate the air quality measurements from every sensor in the Central Business District to generate an Air Quality Index localized to this region of the city. We can then compare air quality metrics across different regions in the city, as well as aggregate measurements across all of the city's sensors to generate an Air Quality Index.
+
+Here, we model the Air Quality Index at Nairobi's Central Business District by aggregating Measurements from three sensors.
+
 ```json
 {
-  "@id": "resco:Indicator/nbo-pm10-aqi",
+  "@id": "resco:Indicator/nbo-cbd-pm10-aqi",
   "@type": "resco:Indicator",
   "resco:indicatorType": "AirQualityIndex",
   "resco:indicatorValue": 38,
