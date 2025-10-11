@@ -70,9 +70,11 @@ Here, we model the Air Quality Index at Nairobi's Central Business District by a
 
 **Environmental Condition in RESCO (JSON-LD)**
 
+We can then model a Condition for the air quality in Nairobi's CBD for continuous monitoring, evaluation and reporting across the city.
+
 ```json
 {
-  "@id": "resco:Condition/nbo-pm25-quality",
+  "@id": "resco:Condition/nbo-cbd-pm25-quality",
   "@type": "resco:Condition",
   "resco:conditionTag": "environment",
   "resco:conditionLabel": "Air Quality Condition",
