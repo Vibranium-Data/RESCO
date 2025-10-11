@@ -18,7 +18,7 @@ Sensors are treated as Entities with entityType as _"Sensor"_ that generate Meas
   "@type": "resco:Entity",
   "resco:entityType": "AirQualitySensor",
   "resco:hasMeasurement": {
-    "@id": "resco:Measurement/nbo-sensor-001-pm10",
+    "@id": "resco:Measurement/nbo-sensor-000004849-pm10",
     "@type": "resco:Measurement",
     "resco:measurementLabel": "PM10 concentration (µg/m³)",
     "resco:measurementValue": 43.0,
@@ -32,7 +32,7 @@ Sensors are treated as Entities with entityType as _"Sensor"_ that generate Meas
 
 ```json
 {
-  "@id": "resco:Condition/nbo-sensor-001-status",
+  "@id": "resco:Condition/nbo-sensor-000004849-status",
   "@type": "resco:Condition",
   "resco:conditionTag": "air quality infrastructure",
   "resco:conditionLabel": "Sensor operational status",
