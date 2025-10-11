@@ -14,16 +14,16 @@ Sensors are treated as Entities with entityType as _"Sensor"_ that generate Meas
     "resco": "https://github.com/vibarnium-data/resco",
     "schema": "http://schema.org/"
   },
-  "@id": "resco:Entity/nbo-sensor-001234567",
+  "@id": "resco:Entity/nbo-sensor-000004849",
   "@type": "resco:Entity",
   "resco:entityType": "AirQualitySensor",
   "resco:hasMeasurement": {
-    "@id": "resco:Measurement/nbo-sensor-001-pm25",
+    "@id": "resco:Measurement/nbo-sensor-001-pm10",
     "@type": "resco:Measurement",
-    "resco:measurementLabel": "PM2.5 concentration (µg/m³)",
-    "resco:measurementValue": 12.3,
+    "resco:measurementLabel": "PM10 concentration (µg/m³)",
+    "resco:measurementValue": 43.0,
     "resco:measurementUnit": "µg/m³",
-    "resco:measurementTimestamp": "2025-09-09T08:30:00Z"
+    "resco:measurementTimestamp": "2025-03-22T10:00:00Z"
   }
 }
 ```
