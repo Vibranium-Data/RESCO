@@ -11,7 +11,7 @@ Sensors are treated as Entities with entityType as _"Sensor"_ that generate Meas
 ```json
 {
   "@context": {
-    "resco": "https://github.com/vibarnium-data/resco",
+    "resco": "https://github.com/vibranium-data/resco",
     "schema": "http://schema.org/"
   },
   "@id": "resco:Entity/nbo-sensor-000004849",
@@ -80,5 +80,32 @@ We can then model a Condition for the air quality in Nairobi's CBD for continuou
   "resco:conditionLabel": "Air Quality Condition",
   "resco:conditionOptions": "['Good', 'Moderate', 'Poor']",
   "resco:conditionValue": "Good"
+}
+```
+
+---
+
+## Example: Nairobi GTFS Matatu Routes
+
+Domain: Mobility
+
+Data source: [Nairobi Digital Matatus Project, Gitlab](https://gitlab.com/digitaltransport/data/africa/nairobi/-/blob/master/Data/GTFS.zip?ref_type=heads)
+
+**Bus / Matatu Stops as Entities**
+
+We model each stop along matatu routes as Entities using some of the base properties. We use custom properties on the Entity class, which we can easily expand RESCO to include, so as to add location data to each stop.
+
+```json
+{
+  "@context": {
+    "resco": "https://github.com/vibranium-data/resco",
+    "schema": "http://schema.org/"
+  },
+  "@id": "resco:Entity/nbo-bus-stop-0001RLW",
+  "@type": "resco:Entity",
+  "resco:entityType": "Bus Stop",
+  "resco:entityName": "Railways",
+  "resco:entityLatitude": "-1.290884",
+  "resco:entityLongitude": "36.828242"
 }
 ```
