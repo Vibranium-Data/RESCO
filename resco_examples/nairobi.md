@@ -109,3 +109,27 @@ We model each stop along matatu routes as Entities using some of the base proper
   "resco:entityLongitude": "36.828242"
 }
 ```
+
+**Matatu / Bus Trip as Event**
+
+Each matatu or bus trip is modeled as an Event, involving the bus or matatu and the departure and arrival stations as entities.
+We can also model the departure and arrival times of the matatus as Measurements, matching each measurement with its associated trip Event.
+
+```json
+{
+  "@id": "resco:Event/matatu-trip-koja-banana-10300106011",
+  "@type": "resco:Event",
+  "resco:eventType": "MatatuTrip",
+  "resco:eventTime": "2025-09-30T10:00:00Z",
+  "resco:generatedBy": "resco:Entity/matatu-000KBR436W",
+  "resco:involvedEntity": [
+    "resco:Entity/matatu-000KBR436W",
+    "resco:Entity/koja-bus-stop-0001KJA",
+    "resco:Entity/banana-bus-stop-0001BNA"
+  ],
+  "resco:hasMeasurement": [
+    "resco:Measurement/departure-koja-bus-stop-0001KJA",
+    "resco:Measurement/arrival-banana-bus-stop-0001BNA"
+  ]
+}
+```
