@@ -49,22 +49,29 @@ We can use Conditions for each road segment to report on its operational status.
 }
 ```
 
-    {
-      "@id": "resco:Event/tims-217284",
-      "@type": "resco:Event",
-      "resco:eventType": "Utility Works",
-      "resco:eventId": "TIMS-217284",
-      "resco:eventTime": {
-        "start": "2025-09-28T19:00:00Z",
-        "end": "2025-10-24T19:00:00Z"
-      },
-      "resco:involvedEntity": "resco:Entity/a316-burlington-lane",
-      "resco:generatedByEvent": "resco:Entity/tfl",
-      "resco:eventSeverity": "Moderate",
-      "resco:eventDescription": "Emergency gas main repairs at [A316] Burlington Lane northbound at the junction of [A4] Hogarth Lane. No northbound access to Hogarth Roundabout. Hogarth Flyover remains open.",
-      "resco:eventUpdate": "Delays possible; status active as of 2025-10-15T14:52:00Z",
-      "resco:eventTag": ["Works", "Utility", "Gas"]
-    },
+**Traffic Disruptions as Events**
+
+We can model traffic disruptions on London roads as Events in RESCO. Here, we model the traffic disruption as an Event while also expanding the Event properties to include custom properties such as:
+
+- A description under eventDescription
+- A rating of the disruption's severity under eventSeverity
+- A custom update message by public works operators for the event under eventUpdate
+
+```json
+{
+  "@id": "resco:Event/tims-217284",
+  "@type": "resco:Event",
+  "resco:eventType": "Utility Works",
+  "resco:eventId": "TIMS-217284",
+  "resco:eventTime": "2025-09-28T19:00:00Z",
+  "resco:involvedEntity": "resco:Entity/a316-burlington-lane",
+  "resco:generatedByEvent": "resco:Entity/tfl",
+  "resco:eventSeverity": "Moderate",
+  "resco:eventDescription": "Emergency gas main repairs at [A316] Burlington Lane northbound at the junction of [A4] Hogarth Lane. No northbound access to Hogarth Roundabout. Hogarth Flyover remains open.",
+  "resco:eventUpdate": "Delays possible; status active as of 2025-10-15T14:52:00Z",
+  "resco:eventTag": ["Works", "Utility", "Gas"]
+}
+```
 
     {
       "@id": "resco:Entity/tfl",
@@ -74,7 +81,6 @@ We can use Conditions for each road segment to report on its operational status.
       "resco:entityId": "org-tfl"
     }
 
-]
 }
 
 {
