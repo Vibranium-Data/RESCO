@@ -8,6 +8,63 @@ Register for the TFL API to gain access [here](https://api-portal.tfl.gov.uk/).
 ### 1. London Road Traffic Disruptions as Events
 
 **Roads as Entities**
+We can model each road in the Transport for London network as an Entity, of entityType RoadSegment. We can even further expand RESCO to accomodate subtypes if needed, or use an entityTag to label this Entity as a road.
+
+```json
+
+{
+  "@context": {
+    "resco": "http://github.com/vibranium-data/resco",
+    "schema": "http://schema.org/"
+  },
+    {
+      "@id": "resco:Entity/a316-burlington-lane",
+      "@type": "resco:Entity",
+      "resco:entityType": "RoadSegment",
+      "resco:entityName": "[A316] Burlington Lane (W4)",
+      "resco:entityId": "road-a316-burlington-lane",
+      "resco:entityTag": ["Asset", "Transport", "Road"],
+      "resco:hasCondition": "resco:Condition/a316-burlington-lane-status"
+    }
+}
+```
+
+    {
+      "@id": "resco:Condition/a316-burlington-lane-status",
+      "@type": "resco:Condition",
+      "resco:conditionLabel": "Operational Status",
+      "resco:conditionTag": "infrastructure",
+      "resco:conditionValue": "Closed (Northbound)",
+      "resco:appliesTo": "resco:Entity/a316-burlington-lane"
+    },
+
+    {
+      "@id": "resco:Event/tims-217284",
+      "@type": "resco:Event",
+      "resco:eventType": "Utility Works",
+      "resco:eventId": "TIMS-217284",
+      "resco:eventTime": {
+        "start": "2025-09-28T19:00:00Z",
+        "end": "2025-10-24T19:00:00Z"
+      },
+      "resco:involvedEntity": "resco:Entity/a316-burlington-lane",
+      "resco:generatedByEvent": "resco:Entity/tfl",
+      "resco:eventSeverity": "Moderate",
+      "resco:eventDescription": "Emergency gas main repairs at [A316] Burlington Lane northbound at the junction of [A4] Hogarth Lane. No northbound access to Hogarth Roundabout. Hogarth Flyover remains open.",
+      "resco:eventUpdate": "Delays possible; status active as of 2025-10-15T14:52:00Z",
+      "resco:eventTag": ["Works", "Utility", "Gas"]
+    },
+
+    {
+      "@id": "resco:Entity/tfl",
+      "@type": "resco:Entity",
+      "resco:entityType": "Organization",
+      "resco:entityName": "Transport for London (TfL)",
+      "resco:entityId": "org-tfl"
+    }
+
+]
+}
 
 {
 "$type": "Tfl.Api.Presentation.Entities.RoadDisruption, Tfl.Api.Presentation.Entities",
