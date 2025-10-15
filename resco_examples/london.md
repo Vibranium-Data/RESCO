@@ -29,14 +29,25 @@ We can model each road in the Transport for London network as an Entity, of enti
 }
 ```
 
-    {
-      "@id": "resco:Condition/a316-burlington-lane-status",
-      "@type": "resco:Condition",
-      "resco:conditionLabel": "Operational Status",
-      "resco:conditionTag": "infrastructure",
-      "resco:conditionValue": "Closed (Northbound)",
-      "resco:appliesTo": "resco:Entity/a316-burlington-lane"
-    },
+**Road Conditions to Report Operational Status**
+
+We can use Conditions for each road segment to report on its operational status. In this case, the road has been closed, which is why there is a traffic disruption reported.
+
+```json
+{
+  "@id": "resco:Condition/a316-burlington-lane-status",
+  "@type": "resco:Condition",
+  "resco:conditionLabel": "Operational Status",
+  "resco:conditionTag": ["infrastructure", "Northbound"],
+  "resco:conditionValue": "Closed",
+  "resco:conditionOptions": [
+    "Operational",
+    "Operational - Maintenance Ongoing",
+    "Closed"
+  ],
+  "resco:appliesTo": "resco:Entity/a316-burlington-lane"
+}
+```
 
     {
       "@id": "resco:Event/tims-217284",
