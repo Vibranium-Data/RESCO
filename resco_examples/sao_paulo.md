@@ -368,3 +368,23 @@ Sensors are treated as Entities with entityType as _"Sensor"_ that generate Meas
   }
 }
 ```
+
+**Infrastructure Condition in RESCO (JSON-LD)**
+
+We can monitor the Condition of each sensor to ensure readings are coming from operational sensors and to schedule maintenance as needed.
+
+```json
+{
+  "@id": "resco:Condition/sao-paulo-sensor-000002243-status",
+  "@type": "resco:Condition",
+  "resco:conditionTag": "air quality infrastructure",
+  "resco:conditionLabel": "Sensor operational status",
+  "resco:conditionValue": "Operational",
+  "resco:conditionOptions": [
+    "Operational",
+    "Under Maintenance",
+    "Not Responding",
+    "Offline"
+  ]
+}
+```
