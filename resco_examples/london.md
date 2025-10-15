@@ -94,3 +94,72 @@ We can model participating organizations, such as Transport for London(TFL), cit
 Domain: Energy / Grid
 
 Data source: [UK Power Networks Live Faults Dataset](https://ukpowernetworks.opendatasoft.com/explore/dataset/ukpn-live-faults/table/)
+
+**Grid Substations / Network Zones as Entities**
+
+UK Power Networks distributes energy through distinct zones. We model each substation or network zone that distributes power to consumers as an Entity of entityType Power Distribution Zone. Here, we model the Kingston zone located in Southwest London as an Entity.
+
+```json
+{
+  "@context": {
+    "resco": "http://github.com/vibranium-data/resco"
+  },
+    {
+      "@id": "resco:Entity/kingston-zone",
+      "@type": "resco:Entity",
+      "resco:entityId": "entity-kingston-zone-0000swldn",
+      "resco:entityName": "Kingston Zone",
+      "resco:entityType": "Power Distribution Zone",
+      "resco:entityTag": ["Energy", "Grid", "UKPowerNetworks"],
+      "resco:hasCondition": "resco:Condition/kingston-zone-status"
+    }
+}
+```
+
+    {
+      "@id": "resco:Condition/kingston-zone-status",
+      "@type": "resco:Condition",
+      "resco:conditionLabel": "Grid operational status",
+      "resco:conditionTag": "infrastructure",
+      "resco:conditionValue": "Faulted (11kV cable failure)",
+      "resco:appliesTo": "resco:Entity/kingston-zone"
+    },
+
+    {
+      "@id": "resco:Event/incd-420564-g",
+      "@type": "resco:Event",
+      "resco:eventId": "INCD-420564-G",
+      "resco:eventType": "Unplanned Power Cut",
+      "resco:eventSeverity": "Moderate",
+      "resco:eventTime": {
+        "start": "2025-10-15T13:13:28Z",
+        "expectedEnd": "2025-10-16T00:30:00Z"
+      },
+      "resco:involvedEntity": "resco:Entity/kingston-zone",
+      "resco:eventDescription": "An underground electricity cable faulted on the high voltage network, causing an area-wide power cut. Engineers estimate most supplies will be restored by 00:30 on 16 Oct 2025.",
+      "resco:eventTag": ["Energy", "Fault", "HighVoltage", "Unplanned"],
+      "resco:generatedByEvent": "resco:Entity/ukpn"
+    },
+
+    {
+      "@id": "resco:Measurement/incd-420564-g-affected-customers",
+      "@type": "resco:Measurement",
+      "resco:measurementLabel": "Customers affected",
+      "resco:measurementValue": 0,
+      "resco:measurementUnit": "count",
+      "resco:measurementTime": "2025-10-15T13:13:28Z",
+      "resco:measuredBy": "resco:Entity/ukpn",
+      "resco:appliesTo": "resco:Entity/kingston-zone"
+    },
+
+    {
+      "@id": "resco:Entity/ukpn",
+      "@type": "resco:Entity",
+      "resco:entityId": "org-ukpn",
+      "resco:entityType": "Organization",
+      "resco:entityName": "UK Power Networks",
+      "resco:entityTag": ["Utility", "Energy"]
+    }
+
+]
+}
