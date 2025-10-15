@@ -412,3 +412,18 @@ Here, we show an example of modelling an Air Quality Index for Sao Paulo by aggr
   ]
 }
 ```
+
+**Environmental Condition in RESCO (JSON-LD)**
+
+We can then model a Condition for the air quality in Sao Paulo for continuous monitoring, evaluation and reporting across the city.
+
+```json
+{
+  "@id": "resco:Condition/sao-paulo-pm10-quality",
+  "@type": "resco:Condition",
+  "resco:conditionTag": "environment",
+  "resco:conditionLabel": "Air Quality Condition",
+  "resco:conditionOptions": "['Good', 'Moderate', 'Poor']",
+  "resco:conditionValue": "Moderate"
+}
+```
