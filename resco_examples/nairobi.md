@@ -74,7 +74,7 @@ We can then model a Condition for the air quality in Nairobi's CBD for continuou
 
 ```json
 {
-  "@id": "resco:Condition/nbo-cbd-pm25-quality",
+  "@id": "resco:Condition/nbo-cbd-pm10-quality",
   "@type": "resco:Condition",
   "resco:conditionTag": "environment",
   "resco:conditionLabel": "Air Quality Condition",
