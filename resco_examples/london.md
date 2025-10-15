@@ -86,3 +86,11 @@ We can model participating organizations, such as Transport for London(TFL), cit
   "resco:entityId": "org-tfl"
 }
 ```
+
+---
+
+## Example: London Grid - Power Disruptions and Restoration
+
+Domain: Energy / Grid
+
+Data source: [UK Power Networks Live Faults Dataset](https://ukpowernetworks.opendatasoft.com/explore/dataset/ukpn-live-faults/table/)
