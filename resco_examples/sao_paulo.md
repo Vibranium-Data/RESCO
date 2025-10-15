@@ -336,3 +336,35 @@ Here's another example of an Intervention, this time to reroute transmission fro
   "resco:interventionOutcome": "Excess generation of 100 MW rerouted from Southeast subsystem to Northeast subsystem via NIS Interconnection 2."
 }
 ```
+
+---
+
+## Example: Sao Paulo Air Quality
+
+Domain: Climate / Environment
+
+Data source: [AQICN Air Quality Data](https://aqicn.org/network/cetesb/)
+
+**Sensors as Entities**
+We model the air quality sensors in Sao Paulo's to generate PM10 air quality measurements at each station.
+Sensors are treated as Entities with entityType as _"Sensor"_ that generate Measurements.
+
+```json
+{
+  "@context": {
+    "resco": "https://github.com/vibranium-data/resco",
+    "schema": "http://schema.org/"
+  },
+  "@id": "resco:Entity/sao-paulo-sensor-000002243",
+  "@type": "resco:Entity",
+  "resco:entityType": "AirQualitySensor",
+  "resco:hasMeasurement": {
+    "@id": "resco:Measurement/nbo-cbd-sensor-000002243-pm10",
+    "@type": "resco:Measurement",
+    "resco:measurementLabel": "PM10 concentration (µg/m³)",
+    "resco:measurementValue": 23.0,
+    "resco:measurementUnit": "µg/m³",
+    "resco:measurementTimestamp": "2025-10-14T13:00:00Z"
+  }
+}
+```
