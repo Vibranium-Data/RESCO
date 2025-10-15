@@ -388,3 +388,27 @@ We can monitor the Condition of each sensor to ensure readings are coming from o
   ]
 }
 ```
+
+**Indicator Representation in RESCO (JSON-LD)**
+
+We aggregate the air quality measurements from every sensor in the Sao Paulo to generate an Air Quality Index for the entire city. We can also compare air quality metrics across different regions in the city.
+
+Here, we show an example of modelling an Air Quality Index for Sao Paulo by aggregating Measurements from five sensors.
+
+```json
+{
+  "@id": "resco:Indicator/sao-paulo-pm10-aqi",
+  "@type": "resco:Indicator",
+  "resco:indicatorType": "AirQualityIndex",
+  "resco:indicatorValue": 61,
+  "rescoindicatorUnit": "AQI",
+  "resco:indicatesCondition": "resco:Condition/sao-paulo-pm10-quality",
+  "resco:basedOnMeasurement": [
+    "resco:resco:Measurement/sao-paulo-sensor-000002243-pm10",
+    "resco:resco:Measurement/sao-paulo-sensor-000002244-pm10",
+    "resco:resco:Measurement/sao-paulo-sensor-000002245-pm10",
+    "resco:resco:Measurement/sao-paulo-sensor-000002246-pm10",
+    "resco:resco:Measurement/sao-paulo-sensor-000002247-pm10"
+  ]
+}
+```
