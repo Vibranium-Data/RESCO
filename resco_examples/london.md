@@ -116,14 +116,21 @@ UK Power Networks distributes energy through distinct zones. We model each subst
 }
 ```
 
-    {
-      "@id": "resco:Condition/kingston-zone-status",
-      "@type": "resco:Condition",
-      "resco:conditionLabel": "Grid operational status",
-      "resco:conditionTag": "infrastructure",
-      "resco:conditionValue": "Faulted (11kV cable failure)",
-      "resco:appliesTo": "resco:Entity/kingston-zone"
-    },
+**Grid Operational Status as Condition**
+
+We can model the operational status of each power distribution zone, reporting whether each substation is operational, under maintenance or offline as needed.
+
+```json
+{
+  "@id": "resco:Condition/kingston-zone-status",
+  "@type": "resco:Condition",
+  "resco:conditionLabel": "Grid operational status",
+  "resco:conditionTag": "infrastructure",
+  "resco:conditionValue": "Faulted (11kV cable failure)",
+  "resco:conditionOptions": ["Operational", "Under Maintenance", "Offline"],
+  "resco:appliesTo": "resco:Entity/kingston-zone-0000swldn"
+}
+```
 
     {
       "@id": "resco:Event/incd-420564-g",
