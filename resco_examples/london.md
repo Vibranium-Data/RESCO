@@ -132,21 +132,29 @@ We can model the operational status of each power distribution zone, reporting w
 }
 ```
 
-    {
-      "@id": "resco:Event/incd-420564-g",
-      "@type": "resco:Event",
-      "resco:eventId": "INCD-420564-G",
-      "resco:eventType": "Unplanned Power Cut",
-      "resco:eventSeverity": "Moderate",
-      "resco:eventTime": {
-        "start": "2025-10-15T13:13:28Z",
-        "expectedEnd": "2025-10-16T00:30:00Z"
-      },
-      "resco:involvedEntity": "resco:Entity/kingston-zone",
-      "resco:eventDescription": "An underground electricity cable faulted on the high voltage network, causing an area-wide power cut. Engineers estimate most supplies will be restored by 00:30 on 16 Oct 2025.",
-      "resco:eventTag": ["Energy", "Fault", "HighVoltage", "Unplanned"],
-      "resco:generatedByEvent": "resco:Entity/ukpn"
-    },
+**Power Disruptions as Events**
+
+We can model grid faults or other kinds of power disruptions as Events, indicating their type using the eventType property with each Event as needed. Beyond the standard Event properties, we can also add custom properties to RESCO that are beneficial to operators, reporting teams or responders as needed. In this example, we model each power disruption as an Event and add custom properties for:
+
+- eventSeverity to indicate the severity and, therefore, the priority of the disruption
+- eventDescription to include an informative description of the power disruption Event
+- eventLocation to add lat/long coordinates for mapping and/or navigating as needed by city teams
+
+```json
+{
+  "@id": "resco:Event/incd-420564-g",
+  "@type": "resco:Event",
+  "resco:eventId": "INCD-420564-G",
+  "resco:eventType": "Unplanned Power Cut",
+  "resco:eventSeverity": "Moderate",
+  "resco:eventTime": "2025-10-15T13:13:28Z",
+  "resco:involvedEntity": "resco:Entity/kingston-zone",
+  "resco:entityLocation": { "lon": "-0.53765", "lat": "51.17998" },
+  "resco:eventDescription": "An underground electricity cable faulted on the high voltage network, causing an area-wide power cut. Engineers estimate most supplies will be restored by 00:30 on 16 Oct 2025.",
+  "resco:eventTag": ["Energy", "Fault", "HighVoltage", "Unplanned"],
+  "resco:generatedByEvent": "resco:Entity/ukpn"
+}
+```
 
     {
       "@id": "resco:Measurement/incd-420564-g-affected-customers",
