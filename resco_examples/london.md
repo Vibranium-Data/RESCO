@@ -164,7 +164,7 @@ We can have Measurements for the number of customers affected by the specific po
 {
   "@id": "resco:Measurement/incd-420564-g-affected-customers",
   "@type": "resco:Measurement",
-  "resco:measurementLabel": "Customers affected",
+  "resco:measurementLabel": "Number of Customers affected",
   "resco:measurementValue": 0,
   "resco:measurementUnit": "count",
   "resco:measurementTime": "2025-10-15T13:13:28Z",
@@ -173,11 +173,20 @@ We can have Measurements for the number of customers affected by the specific po
 }
 ```
 
-    {
-      "@id": "resco:Entity/ukpn",
-      "@type": "resco:Entity",
-      "resco:entityId": "org-ukpn",
-      "resco:entityType": "Organization",
-      "resco:entityName": "UK Power Networks",
-      "resco:entityTag": ["Utility", "Energy"]
-    }
+We can also similarly use Measurements to count the number of customer calls received concerning the incident.
+We can also use Indicators to model restoration times between the time the power disruption Event is generated, and the time the power is restored.
+
+**Organizations as Entities**
+
+We model UK Power Networks as an Entity of type Organization, shown by its entityType property.
+
+```json
+{
+  "@id": "resco:Entity/ukpn",
+  "@type": "resco:Entity",
+  "resco:entityId": "org-ukpn",
+  "resco:entityType": "Organization",
+  "resco:entityName": "UK Power Networks",
+  "resco:entityTag": ["Utility", "Energy"]
+}
+```
