@@ -174,7 +174,6 @@ We can have Measurements for the number of customers affected by the specific po
 ```
 
 We can also similarly use Measurements to count the number of customer calls received concerning the incident.
-We can also use Indicators to model restoration times between the time the power disruption Event is generated, and the time the power is restored.
 
 **Organizations as Entities**
 
@@ -188,5 +187,26 @@ We model UK Power Networks as an Entity of type Organization, shown by its entit
   "resco:entityType": "Organization",
   "resco:entityName": "UK Power Networks",
   "resco:entityTag": ["Utility", "Energy"]
+}
+```
+
+**Power Restoration Time using Indicators**
+
+We can also use Indicators to model restoration times between the time the power disruption Event is generated, and the time the power is restored.
+
+First, we model the moment the power is confirmed as restored by UK Power Networks as an Event.
+
+```json
+{
+  "@id": "resco:Event/incd-420564-g-001-restoration",
+  "@type": "resco:Event",
+  "resco:eventId": "incd-420564-g-001-restoration",
+  "resco:eventType": "Power Restoration",
+  "resco:eventTime": "2025-10-15T19:00:00Z",
+  "resco:involvedEntity": "resco:Entity/kingston-zone-0000swldn",
+  "resco:entityLocation": { "lon": "-0.53765", "lat": "51.17998" },
+  "resco:eventDescription": "Power was restored successfully at Kingston Zone on Oct 15, 2025.",
+  "resco:eventTag": ["Energy", "Restoration", "HighVoltage"],
+  "resco:generatedByEvent": "resco:Entity/ukpn"
 }
 ```
