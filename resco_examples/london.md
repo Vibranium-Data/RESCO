@@ -118,16 +118,16 @@ UK Power Networks distributes energy through distinct zones. We model each subst
 
 **Grid Operational Status as Condition**
 
-We can model the operational status of each power distribution zone, reporting whether each substation is operational, under maintenance or offline as needed.
+We can model the operational status of each power distribution zone, reporting whether each substation is operational, faulted, under maintenance or offline as needed.
 
 ```json
 {
   "@id": "resco:Condition/kingston-zone-status",
   "@type": "resco:Condition",
   "resco:conditionLabel": "Grid operational status",
-  "resco:conditionTag": "infrastructure",
-  "resco:conditionValue": "Faulted (11kV cable failure)",
-  "resco:conditionOptions": ["Operational", "Under Maintenance", "Offline"],
+  "resco:conditionTag": ["infrastructure" "11kv power failure"],
+  "resco:conditionValue": "Faulted",
+  "resco:conditionOptions": ["Operational", "Faulted", "Under Maintenance", "Offline"],
   "resco:appliesTo": "resco:Entity/kingston-zone-0000swldn"
 }
 ```
@@ -224,5 +224,25 @@ We then generate an power restoration duration Indicator based on two Measuremen
     "resco:Measurement/power-fault-time-incd-420564-g",
     "resco:Measurement/power-restoration-time-incd-420564-g-001-restoration"
   ]
+}
+```
+
+**Power Rerouting with Interventions**
+
+We can also model Interventions by UK Power Networks to reroute power transmission using other substations or grid transmission lines to households in the Kingston zone so that there are no unaffected customers. This would involve RESCO's Intervention class and could be modeled as follows:
+
+```json
+{
+  "@id": "resco:Intervention/restore-kingston-grid",
+  "@type": "resco:Intervention",
+  "resco:interventionLabel": "Grid restoration",
+  "resco:implementedBy": "resco:Entity/ukpn",
+  "resco:appliesTo": "resco:Entity/kingston-zone",
+  "resco:basedOnIndicator": "resco:Indicator/grid-availability",
+  "resco:currentEntityCondition": "resco:Condition/kingston-zone-status-faulted",
+  "resco:targetEntityCondition": "resco:Condition/kingston-zone-status-operational",
+  "resco:interventionStartTime": "2025-10-15T13:45:00Z",
+  "resco:interventionEndTime": "2025-10-16T00:30:00Z",
+  "resco:interventionOutcome": "Power Supply restored to all affected postcodes."
 }
 ```
