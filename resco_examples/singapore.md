@@ -61,16 +61,19 @@ We can model each weather station across Singapore as an Entity of entityType we
 }
 ```
 
-    {
-      "@id": "resco:Measurement/S108-2024-07-16T15:59:00Z",
-      "@type": "resco:Measurement",
-      "resco:measurementId": "S108-2024-07-16T15:59:00Z",
-      "resco:measurementLabel": "Air Temperature",
-      "resco:measurementValue": 29,
-      "resco:measurementUnit": "°C",
-      "resco:measurementTime": "2024-07-16T15:59:00Z",
-      "resco:generatedBy": "resco:Entity/S108"
-    }
+**Temperature Readings as Measurements**
 
-]
+We can then model the temperature reading from the thermometer at the weather station as a Measurement.
+
+```json
+{
+  "@id": "resco:Measurement/S108-2024-07-16T15:59:00Z",
+  "@type": "resco:Measurement",
+  "resco:measurementId": "S108-2024-07-16T15:59:00Z",
+  "resco:measurementLabel": "Air Temperature",
+  "resco:measurementValue": 29,
+  "resco:measurementUnit": "°C",
+  "resco:measurementTime": "2024-07-16T15:59:00Z",
+  "resco:generatedBy": "resco:Entity/thermometer-S108"
 }
+```
