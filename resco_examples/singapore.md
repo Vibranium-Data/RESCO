@@ -31,13 +31,36 @@ We can model each weather station across Singapore as an Entity of entityType we
 
 ```
 
-    {
-      "@id": "resco:Condition/operational",
-      "@type": "resco:Condition",
-      "resco:conditionId": "operational",
-      "resco:conditionLabel": "Operational",
-      "resco:appliesTo": "resco:Entity/S108"
-    },
+```json
+{
+  "@id": "resco:Entity/S108",
+  "@type": "resco:Entity",
+  "resco:entityId": "thermometer-S108",
+  "resco:entityName": "Thermometer - Marina Gardens Drive Weather Station",
+  "resco:entityType": "Sensor",
+  "resco:entityTag": ["thermometer", "temperature", "singapore"],
+  "resco:hasCondition": "resco:Condition/operational"
+}
+```
+
+**Thermometer Condition in RESCO (JSON-LD)**
+
+```json
+{
+  "@id": "resco:Condition/operational",
+  "@type": "resco:Condition",
+  "resco:conditionId": "operational",
+  "resco:conditionLabel": "Operational",
+  "resco:conditionOptions": [
+    "Operational",
+    "Under Maintenance",
+    "Not Responding",
+    "Offline"
+  ],
+  "resco:appliesTo": "resco:Entity/thermometer-S108"
+}
+```
+
     {
       "@id": "resco:Measurement/S108-2024-07-16T15:59:00Z",
       "@type": "resco:Measurement",
