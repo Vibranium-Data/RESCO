@@ -85,6 +85,7 @@ You can find the Singapore weather data from their open data [here](https://data
 **Weather Station and Humidity Sensors as Entities**
 
 We again model each weather station as an Entity, along with each humidity sensor. We use the entityType property to specify the type of entity, and entityTag properties to include additional labels relevant to practitioners, researchers or administrators.
+We also expand RESCO to include an entityLocation property for the weather station, showing RESCO's easy customizability.
 
 ```json
 {
@@ -98,11 +99,24 @@ We again model each weather station as an Entity, along with each humidity senso
       "resco:entityId": "S109",
       "resco:entityName": "Ang Mo Kio Avenue 5 Weather Station",
       "resco:entityType": "WeatherStation",
+      "resco:entityLocation": {"lat":"1.3764","long":"103.8492"},
       "resco:entityTag": ["weather", "ang mo kio", "singapore"],
       "resco:hasCondition": "resco:Condition/operational"
     }
 }
 
+```
+
+```json
+{
+  "@id": "resco:Entity/S109",
+  "@type": "resco:Entity",
+  "resco:entityId": "humidity-sensor-S109",
+  "resco:entityName": "Hygrometer - Marina Gardens Drive Weather Station",
+  "resco:entityType": "Sensor",
+  "resco:entityTag": ["hygrometer", "humidity", "singapore"],
+  "resco:hasCondition": "resco:Condition/operational"
+}
 ```
 
 {
