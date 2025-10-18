@@ -154,176 +154,30 @@ We can then model the relative humidity reading from the thermometer at the weat
 }
 ```
 
+**Average Relative Humidity as an Indicator**
+
+With relative humidity Measurements across Singapore from each weather station, we can aggregate these Measurements to generate an Indicator for the average humidity across Singapore.
+
+```json
 {
-"code": 0,
-"data": {
-"stations": [
-{
-"id": "S109",
-"deviceId": "S109",
-"name": "Ang Mo Kio Avenue 5",
-"location": {
-"latitude": 1.3764,
-"longitude": 103.8492
+  "@id": "resco:Indicator/singapore_average_humidity",
+  "@type": "resco:Indicator",
+  "resco:indicatorType": "Singapore Average Relative Humidity",
+  "resco:indicatorValue": 83.7,
+  "resco:indicatorUnit": "%",
+  "resco:basedOnMeasurement": [
+    "resco:Measurement/S109-rh-2025-10-19T01:59:00Z",
+    "resco:Measurement/S106-rh-2025-10-19T01:59:00Z",
+    "resco:Measurement/S107-rh-2025-10-19T01:59:00Z",
+    "resco:Measurement/S115-rh-2025-10-19T01:59:00Z",
+    "resco:Measurement/S102-rh-2025-10-19T01:59:00Z",
+    "resco:Measurement/S060-rh-2025-10-19T01:59:00Z",
+    "resco:Measurement/S050-rh-2025-10-19T01:59:00Z",
+    "resco:Measurement/S044-rh-2025-10-19T01:59:00Z",
+    "resco:Measurement/S043-rh-2025-10-19T01:59:00Z",
+    "resco:Measurement/S024-rh-2025-10-19T01:59:00Z",
+    "resco:Measurement/S006-rh-2025-10-19T01:59:00Z",
+    "resco:Measurement/S111-rh-2025-10-19T01:59:00Z"
+  ]
 }
-},
-{
-"id": "S106",
-"deviceId": "S106",
-"name": "Pulau Ubin",
-"location": {
-"latitude": 1.4168,
-"longitude": 103.9673
-}
-},
-{
-"id": "S107",
-"deviceId": "S107",
-"name": "East Coast Parkway",
-"location": {
-"latitude": 1.3135,
-"longitude": 103.9625
-}
-},
-{
-"id": "S115",
-"deviceId": "S115",
-"name": "Tuas South Avenue 3",
-"location": {
-"latitude": 1.29377,
-"longitude": 103.61843
-}
-},
-{
-"id": "S102",
-"deviceId": "S102",
-"name": "Semakau Landfill",
-"location": {
-"latitude": 1.189,
-"longitude": 103.768
-}
-},
-{
-"id": "S60",
-"deviceId": "S60",
-"name": "Sentosa",
-"location": {
-"latitude": 1.25,
-"longitude": 103.8279
-}
-},
-{
-"id": "S50",
-"deviceId": "S50",
-"name": "Clementi Road",
-"location": {
-"latitude": 1.3337,
-"longitude": 103.7768
-}
-},
-{
-"id": "S44",
-"deviceId": "S44",
-"name": "Nanyang Avenue",
-"location": {
-"latitude": 1.34583,
-"longitude": 103.68166
-}
-},
-{
-"id": "S43",
-"deviceId": "S43",
-"name": "Kim Chuan Road",
-"location": {
-"latitude": 1.3399,
-"longitude": 103.8878
-}
-},
-{
-"id": "S24",
-"deviceId": "S24",
-"name": "Upper Changi Road North",
-"location": {
-"latitude": 1.3678,
-"longitude": 103.9826
-}
-},
-{
-"id": "S06",
-"deviceId": "S06",
-"name": "Paya Lebar",
-"location": {
-"latitude": 1.3524,
-"longitude": 103.9007
-}
-},
-{
-"id": "S111",
-"deviceId": "S111",
-"name": "Scotts Road",
-"location": {
-"latitude": 1.31055,
-"longitude": 103.8365
-}
-}
-],
-"readings": [
-{
-"timestamp": "2025-10-19T01:59:00+08:00",
-"data": [
-{
-"stationId": "S109",
-"value": 83.6
-},
-{
-"stationId": "S106",
-"value": 86.7
-},
-{
-"stationId": "S107",
-"value": 79.3
-},
-{
-"stationId": "S115",
-"value": 84.2
-},
-{
-"stationId": "S102",
-"value": 84.9
-},
-{
-"stationId": "S60",
-"value": 85.3
-},
-{
-"stationId": "S50",
-"value": 85.4
-},
-{
-"stationId": "S44",
-"value": 88.1
-},
-{
-"stationId": "S43",
-"value": 81.4
-},
-{
-"stationId": "S24",
-"value": 82.1
-},
-{
-"stationId": "S06",
-"value": 78
-},
-{
-"stationId": "S111",
-"value": 85.8
-}
-]
-}
-],
-"readingType": "RH 1M F",
-"readingUnit": "percentage"
-},
-"errorMsg": ""
-}
+```
