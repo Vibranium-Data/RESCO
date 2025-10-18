@@ -119,6 +119,24 @@ We also expand RESCO to include an entityLocation property for the weather stati
 }
 ```
 
+**Hygrometer (Humidity Sensor) Condition in RESCO (JSON-LD)**
+
+```json
+{
+  "@id": "resco:Condition/operational",
+  "@type": "resco:Condition",
+  "resco:conditionId": "operational",
+  "resco:conditionLabel": "Operational",
+  "resco:conditionOptions": [
+    "Operational",
+    "Under Maintenance",
+    "Not Responding",
+    "Offline"
+  ],
+  "resco:appliesTo": "resco:Entity/humidity-sensor-S109"
+}
+```
+
 {
 "code": 0,
 "data": {
