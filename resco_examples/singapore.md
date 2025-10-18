@@ -67,9 +67,9 @@ We can then model the temperature reading from the thermometer at the weather st
 
 ```json
 {
-  "@id": "resco:Measurement/S108-2024-07-16T15:59:00Z",
+  "@id": "resco:Measurement/S108-temp-2024-07-16T15:59:00Z",
   "@type": "resco:Measurement",
-  "resco:measurementId": "S108-2024-07-16T15:59:00Z",
+  "resco:measurementId": "S108-temp-2024-07-16T15:59:00Z",
   "resco:measurementLabel": "Air Temperature",
   "resco:measurementValue": 29,
   "resco:measurementUnit": "°C",
@@ -134,6 +134,23 @@ We also expand RESCO to include an entityLocation property for the weather stati
     "Offline"
   ],
   "resco:appliesTo": "resco:Entity/humidity-sensor-S109"
+}
+```
+
+**Relative Humidity Readings as Measurements**
+
+We can then model the relative humidity reading from the thermometer at the weather station as a Measurement.
+
+```json
+{
+  "@id": "resco:Measurement/S109-rh-2025-10-19T01:59:00Z",
+  "@type": "resco:Measurement",
+  "resco:measurementId": "S109-rh-2025-10-19T01:59:00Z",
+  "resco:measurementLabel": "Relative Humidity",
+  "resco:measurementValue": 83.6,
+  "resco:measurementUnit": "%",
+  "resco:measurementTime": "2025-10-19T01:59:00Z",
+  "resco:generatedBy": "resco:Entity/thermometer-S108"
 }
 ```
 
