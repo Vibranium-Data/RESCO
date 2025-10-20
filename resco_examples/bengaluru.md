@@ -27,3 +27,23 @@ We can model each EV charging station as an Entity of entityType EV Charging Sta
 }
 
 ```
+
+**EV Station Operational Status as Conditions**
+
+We can then model each EV station's operational status as a Condition, to understand whether the EV station is available to provide charging services and also to monitor and schedule maintenance projects. This data could then be used in other applications, foe example to show drivers available and operational EV stations near them.
+
+```json
+{
+  "@id": "resco:Condition/ev-station-operational-status",
+  "@type": "resco:Condition",
+  "resco:conditionId": "operational",
+  "resco:conditionLabel": "Operational",
+  "resco:conditionOptions": [
+    "Operational",
+    "Under Maintenance",
+    "Not Responding",
+    "Offline"
+  ],
+  "resco:appliesTo": "resco:Entity/ev-station-operational-status"
+}
+```
