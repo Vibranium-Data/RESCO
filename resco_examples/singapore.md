@@ -202,17 +202,35 @@ We model each camera as an Entity of entityType Sensor.
     "schema": "http://schema.org/"
   },
     {
-      "@id": "resco:Entity/C1001",
+      "@id": "resco:Entity/camera-C1001",
       "@type": "resco:Entity",
       "resco:entityId": "C1001",
       "resco:entityName": "traffic_camera_1001",
       "resco:entityType": "Sensor",
       "resco:entityLocation": {"lat":"1.29531332","long":"103.871146"},
       "resco:entityTag": ["camera", "traffic", "singapore"],
-      "resco:hasCondition": "resco:Condition/operational"
+      "resco:hasCondition": "resco:Condition/camera-operational-status"
     }
 }
 
+```
+
+**Camera Condition in RESCO (JSON-LD)**
+
+```json
+{
+  "@id": "resco:Condition/camera-operational-status",
+  "@type": "resco:Condition",
+  "resco:conditionId": "operational",
+  "resco:conditionLabel": "Operational",
+  "resco:conditionOptions": [
+    "Operational",
+    "Under Maintenance",
+    "Not Responding",
+    "Offline"
+  ],
+  "resco:appliesTo": "resco:Entity/camera-C1001"
+}
 ```
 
 **Image Records as Measurements**
@@ -229,7 +247,7 @@ From each camera, we can model every image the camera takes as a Measurement. Th
   "resco:measurementUnit": "",
   "resco:measurementTime": "2025-10-20T20:26:05Z",
   "resco:measurementURL": "https://images.data.gov.sg/api/traffic-images/2025/10/1e12ec16-3c48-47bb-b687-97235853401d.jpg",
-  "resco:generatedBy": "resco:Entity/C1001"
+  "resco:generatedBy": "resco:Entity/camera-C1001"
 }
 ```
 
