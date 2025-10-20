@@ -6,7 +6,7 @@ Data Source: [Bengaluru Open Data Portal](https://opendata.benscl.com/?q=dataset
 
 **EV Stations as Entities**
 
-We can model each EV charging station as an Entity of entityType EV Charging Station. We can also extend RESCO's core Entity properties to include an entityLocation property which enables us to include each EV station's coordinates. Finally, we're also able to use the flexible entityTag property on each EV station to help add context, such as with adding particular company brands that own and/or operate the EV station.
+We can model each EV charging station as an Entity of entityType EV Charging Station. We can also extend RESCO's core Entity properties to include an entityLocation property which enables us to include each EV station's coordinates. Finally, we're also able to use the flexible entityTag property on each EV station to help add context, such as with adding particular company brands that own and/or operate the EV station. We can also add a tag to show whether there are additional services related to EV charging at a station, such as battery swaps.
 
 ```json
 {
@@ -21,7 +21,7 @@ We can model each EV charging station as an Entity of entityType EV Charging Sta
       "resco:entityName": "BESCOM - Hosakote SDO",
       "resco:entityType": "ev-charging-station",
       "resco:entityLocation": {"lat":"13.0731299","long":"77.786843"},
-      "resco:entityTag": ["BESCOM", "ev station", "bengaluru"],
+      "resco:entityTag": ["BESCOM", "ev station", "bengaluru", "battery swap available"],
       "resco:hasCondition": "resco:Condition/ev-station-operational-status"
     }
 }
