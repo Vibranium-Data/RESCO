@@ -20,6 +20,7 @@ We can model each EV charging station as an Entity of entityType EV Charging Sta
       "resco:entityId": "ev_st0000001",
       "resco:entityName": "BESCOM - Hosakote SDO",
       "resco:entityType": "ev-charging-station",
+      "resco:entityLocation": {"lat":"13.0731299","long":"77.786843"},
       "resco:entityTag": ["BESCOM", "ev station", "bengaluru"],
       "resco:hasCondition": "resco:Condition/ev-station-operational-status"
     }
