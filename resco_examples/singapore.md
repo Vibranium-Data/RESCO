@@ -39,7 +39,7 @@ We can model each weather station across Singapore as an Entity of entityType we
   "resco:entityName": "Thermometer - Marina Gardens Drive Weather Station",
   "resco:entityType": "Sensor",
   "resco:entityTag": ["thermometer", "temperature", "singapore"],
-  "resco:hasCondition": "resco:Condition/operational"
+  "resco:hasCondition": "resco:Condition/thermometer-operational-status"
 }
 ```
 
@@ -47,7 +47,7 @@ We can model each weather station across Singapore as an Entity of entityType we
 
 ```json
 {
-  "@id": "resco:Condition/operational",
+  "@id": "resco:Condition/thermometer-operational-status",
   "@type": "resco:Condition",
   "resco:conditionId": "operational",
   "resco:conditionLabel": "Operational",
@@ -101,7 +101,7 @@ We also expand RESCO to include an entityLocation property for the weather stati
       "resco:entityType": "WeatherStation",
       "resco:entityLocation": {"lat":"1.3764","long":"103.8492"},
       "resco:entityTag": ["weather", "ang mo kio", "singapore"],
-      "resco:hasCondition": "resco:Condition/operational"
+      "resco:hasCondition": "resco:Condition/weather-station-operational-status"
     }
 }
 
@@ -115,7 +115,7 @@ We also expand RESCO to include an entityLocation property for the weather stati
   "resco:entityName": "Hygrometer - Marina Gardens Drive Weather Station",
   "resco:entityType": "Sensor",
   "resco:entityTag": ["hygrometer", "humidity", "singapore"],
-  "resco:hasCondition": "resco:Condition/operational"
+  "resco:hasCondition": "resco:Condition/hygrometer-operational-status"
 }
 ```
 
@@ -123,7 +123,7 @@ We also expand RESCO to include an entityLocation property for the weather stati
 
 ```json
 {
-  "@id": "resco:Condition/operational",
+  "@id": "resco:Condition/hygrometer-operational-status",
   "@type": "resco:Condition",
   "resco:conditionId": "operational",
   "resco:conditionLabel": "Operational",
@@ -160,7 +160,7 @@ With relative humidity Measurements across Singapore from each weather station, 
 
 ```json
 {
-  "@id": "resco:Indicator/singapore_average_humidity",
+  "@id": "resco:Indicator/singapore-average-humidity",
   "@type": "resco:Indicator",
   "resco:indicatorType": "Singapore Average Relative Humidity",
   "resco:indicatorValue": 83.7,
@@ -205,7 +205,7 @@ We model each camera as an Entity of entityType Sensor.
       "@id": "resco:Entity/camera-C1001",
       "@type": "resco:Entity",
       "resco:entityId": "C1001",
-      "resco:entityName": "traffic_camera_1001",
+      "resco:entityName": "traffic-camera-1001",
       "resco:entityType": "Sensor",
       "resco:entityLocation": {"lat":"1.29531332","long":"103.871146"},
       "resco:entityTag": ["camera", "traffic", "singapore"],
