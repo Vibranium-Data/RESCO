@@ -215,6 +215,24 @@ We model each camera as an Entity of entityType Sensor.
 
 ```
 
+**Image Records as Measurements**
+
+From each camera, we can model every image the camera takes as a Measurement. This way, we can associate each image with the time it was taken via a timestamp, and with the camera that took it through Measurement properties. We expand RESCO's core set of Measurement properties to include a measurementURL property that points to the location of the raw image's storage.
+
+```json
+{
+  "@id": "resco:Measurement/C1001-img-2025-10-20T20:26:05Z",
+  "@type": "resco:Measurement",
+  "resco:measurementId": "C1001-img-2025-10-20T20:26:05Z",
+  "resco:measurementLabel": "Traffic Camera Feed",
+  "resco:measurementValue": "",
+  "resco:measurementUnit": "",
+  "resco:measurementTime": "2025-10-20T20:26:05Z",
+  "resco:measurementURL": "https://images.data.gov.sg/api/traffic-images/2025/10/1e12ec16-3c48-47bb-b687-97235853401d.jpg",
+  "resco:generatedBy": "resco:Entity/C1001"
+}
+```
+
 {
 "items": [
 {
