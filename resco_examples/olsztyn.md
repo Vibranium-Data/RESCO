@@ -93,3 +93,45 @@ The real estate project might involve different prices for each unit depending o
   ]
 }
 ```
+
+**Project Status with Conditions**
+
+We can use Conditions to track the each project or unit's status as the phases of construction progress. We can even use Conditions to show whether the project was delivered within the budget.
+
+```json
+{
+  "@id": "resco:Condition/real-estate-project-status",
+  "@type": "resco:Condition",
+  "resco:conditionLabel": "Real Estate Project Overall Status",
+  "resco:conditionTag": ["real estate project" "olsztyn", "construction phases"],
+  "resco:conditionValue": "Planning",
+  "resco:conditionOptions": ["Bid Evaluation", "Developer Selected", "Planning", "In Construction", "Construction Complete", "Announced for Occupancy", "Active Occupancy"],
+  "resco:appliesTo": "resco:Entity/re_project_sokola_pr00001"
+}
+```
+
+```json
+{
+  "@id": "resco:Condition/real-estate-project-budget-status",
+  "@type": "resco:Condition",
+  "resco:conditionLabel": "Real Estate Project Budget Status",
+  "resco:conditionTag": ["real estate project" "olsztyn", "construction phases"],
+  "resco:conditionValue": "Within Budget",
+  "resco:conditionOptions": ["Within Budget", "Over Budget"],
+  "resco:appliesTo": "resco:Entity/re_project_sokola_pr00001"
+}
+```
+
+We can also have more granular Conditions at the unit level that help with tracking the progress of construction with details reported by the real estate developer. Here's an example for one of the apartment block units for the project on Sokola Street:
+
+```json
+{
+  "@id": "resco:Condition/real-estate-project-construction-status",
+  "@type": "resco:Condition",
+  "resco:conditionLabel": "Real Estate Project Construction Status",
+  "resco:conditionTag": ["real estate project" "sokola street", "construction phases"],
+  "resco:conditionValue": "Planning",
+  "resco:conditionOptions": ["Planning", "Plans Pending Approval", "Plans Approved", "Funds Released", "Construction Ongoing", "Structure Complete - Pending Finishes", "Structure and Finishes Complete", "Construction Complete - Pending Inspection", "Construction and Inspection Complete", "Construction Complete - Announced for Occupancy", "Construction Complete - Active Occupancy"],
+  "resco:appliesTo": "resco:Entity/re_project_sokola_pu00001"
+}
+```
