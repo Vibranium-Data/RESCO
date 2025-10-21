@@ -50,7 +50,7 @@ We can then model each apartment unit for this particular project, including bot
 }
 ```
 
-**Real Estate Prices as Measurements**
+**Real Estate Prices as Measurements and Indicators**
 
 We can use Measurements to model real estate prices both at the project and unit level. We can use the generatedBy property in RESCO's Measurement class to show who is reporting or updating the price. An example from our dataset involving an offer price at the unit level for EKOBUD PBO for apartment blocks on Sokola Street would look like this:
 
@@ -64,5 +64,32 @@ We can use Measurements to model real estate prices both at the project and unit
   "resco:measurementUnit": "PLN",
   "resco:measurementTime": "2025-10-20T09:00:00Z",
   "resco:generatedBy": "resco:Entity/ekobud-pbo-2001"
+}
+```
+
+The real estate project might involve different prices for each unit depending on floor area, bedrooms or amenities. The project might also involve other spaces such as parking whose price may not be included in the per-unit price. To get an estimate for an entire project composed of different types of units, we can create an Indicator for the project's total price or total investment. For example, let's consider if the above project on Sokola street had 12 different units each costing 348,702.00 PLN as well as basement parking costing 700,000 PLN. Here's how we would model the entire project's price in RESCO:
+
+```json
+{
+  "@id": "resco:Indicator/re_project_pr00001_price",
+  "@type": "resco:Indicator",
+  "resco:indicatorLabel": "Project Price Apartment Blocks - Sokola Street",
+  "resco:indicatorValue": "4884424.00",
+  "resco:indicatorUnit": "PLN",
+  "resco:basedOnMeasurement": [
+    "resco:Measurement/re_project_pu00001_price",
+    "resco:Measurement/re_project_pu00002_price",
+    "resco:Measurement/re_project_pu00003_price",
+    "resco:Measurement/re_project_pu00004_price",
+    "resco:Measurement/re_project_pu00005_price",
+    "resco:Measurement/re_project_pu00006_price",
+    "resco:Measurement/re_project_pu00007_price",
+    "resco:Measurement/re_project_pu00008_price",
+    "resco:Measurement/re_project_pu00009_price",
+    "resco:Measurement/re_project_pu00010_price",
+    "resco:Measurement/re_project_pu00011_price",
+    "resco:Measurement/re_project_pu00012_price",
+    "resco:Measurement/re_project_pr_parking_price"
+  ]
 }
 ```
