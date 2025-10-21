@@ -19,13 +19,13 @@ First, we model an overall real estate project for apartment blocks on Sokola St
     "schema": "http://schema.org#"
   },
     {
-      "@id": "resco:Entity/re_project_pr00001",
+      "@id": "resco:Entity/re_project_sokola_pr00001",
       "@type": "resco:Entity",
-      "resco:entityId": "re_project_pr00001",
+      "resco:entityId": "re_project_sokola_pr00001",
       "resco:entityName": "Apartment Blocks - Sokola Street",
       "resco:entityType": "Asset",
       "resco:entityTag": ["EKOBUD pbo", "housing", "olsztyn"],
-      "resco:hasMeasurement":"resco:Measurement/re_project_pr00001_price",
+      "resco:hasMeasurement":"resco:Measurement/re_project_sokola_pr00001_price",
       "resco:hasCondition": "resco:Condition/real-estate-project-status"
     }
 }
@@ -36,9 +36,9 @@ We can then model each apartment unit for this particular project, including bot
 
 ```json
 {
-  "@id": "resco:Entity/re_project_pu00001",
+  "@id": "resco:Entity/re_project_sokola_pu00001",
   "@type": "resco:Entity",
-  "resco:entityId": "re_project_pu00001",
+  "resco:entityId": "re_project_sokola_pu00001",
   "resco:entityName": "Apartment Unit, Apartment Blocks - Sokola Street",
   "resco:entityType": "Asset",
   "resco:hasMeasurement": "resco:Measurement/re_project_pu00001_price",
@@ -56,9 +56,9 @@ We can use Measurements to model real estate prices both at the project and unit
 
 ```json
 {
-  "@id": "resco:Measurement/re_project_pu00001_price",
+  "@id": "resco:Measurement/re_project_sokola_pu00001_price",
   "@type": "resco:Measurement",
-  "resco:measurementId": "re_project_pu00001_price",
+  "resco:measurementId": "re_project_sokola_pu00001_price",
   "resco:measurementLabel": "Relative Humidity",
   "resco:measurementValue": 347802.0,
   "resco:measurementUnit": "PLN",
@@ -71,25 +71,25 @@ The real estate project might involve different prices for each unit depending o
 
 ```json
 {
-  "@id": "resco:Indicator/re_project_pr00001_price",
+  "@id": "resco:Indicator/re_project_sokola_pr00001_price",
   "@type": "resco:Indicator",
   "resco:indicatorLabel": "Project Price Apartment Blocks - Sokola Street",
   "resco:indicatorValue": "4884424.00",
   "resco:indicatorUnit": "PLN",
   "resco:basedOnMeasurement": [
-    "resco:Measurement/re_project_pu00001_price",
-    "resco:Measurement/re_project_pu00002_price",
-    "resco:Measurement/re_project_pu00003_price",
-    "resco:Measurement/re_project_pu00004_price",
-    "resco:Measurement/re_project_pu00005_price",
-    "resco:Measurement/re_project_pu00006_price",
-    "resco:Measurement/re_project_pu00007_price",
-    "resco:Measurement/re_project_pu00008_price",
-    "resco:Measurement/re_project_pu00009_price",
-    "resco:Measurement/re_project_pu00010_price",
-    "resco:Measurement/re_project_pu00011_price",
-    "resco:Measurement/re_project_pu00012_price",
-    "resco:Measurement/re_project_pr_parking_price"
+    "resco:Measurement/re_project_sokola_pu00001_price",
+    "resco:Measurement/re_project_sokola_pu00002_price",
+    "resco:Measurement/re_project_sokola_pu00003_price",
+    "resco:Measurement/re_project_sokola_pu00004_price",
+    "resco:Measurement/re_project_sokola_pu00005_price",
+    "resco:Measurement/re_project_sokola_pu00006_price",
+    "resco:Measurement/re_project_sokola_pu00007_price",
+    "resco:Measurement/re_project_sokola_pu00008_price",
+    "resco:Measurement/re_project_sokola_pu00009_price",
+    "resco:Measurement/re_project_sokola_pu00010_price",
+    "resco:Measurement/re_project_sokola_pu00011_price",
+    "resco:Measurement/re_project_sokola_pu00012_price",
+    "resco:Measurement/re_project_pr_sokola_parking_price"
   ]
 }
 ```
