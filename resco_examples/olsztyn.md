@@ -49,3 +49,20 @@ We can then model each apartment unit for this particular project, including bot
   ]
 }
 ```
+
+**Real Estate Prices as Measurements**
+
+We can use Measurements to model real estate prices both at the project and unit level. We can use the generatedBy property in RESCO's Measurement class to show who is reporting or updating the price. An example from our dataset involving an offer price at the unit level for EKOBUD PBO for apartment blocks on Sokola Street would look like this:
+
+```json
+{
+  "@id": "resco:Measurement/re_project_pu00001_price",
+  "@type": "resco:Measurement",
+  "resco:measurementId": "re_project_pu00001_price",
+  "resco:measurementLabel": "Relative Humidity",
+  "resco:measurementValue": 347802.0,
+  "resco:measurementUnit": "PLN",
+  "resco:measurementTime": "2025-10-20T09:00:00Z",
+  "resco:generatedBy": "resco:Entity/ekobud-pbo-2001"
+}
+```
