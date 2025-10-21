@@ -60,7 +60,7 @@ We can also model the developer of each real estate project as an Entity, with t
   "resco:entityName": "Ekobud LLC PBO",
   "resco:entityType": "Real Estate Developer",
   "resco:entityAddress": "8 ul. Przemysłowa, Warmińsko-mazurskie,	Ostródzki,	Ostróda, Ostróda, 14-100",
-  "resco:entityTag": ["real estate developer", "bids", "olsztyn"]
+  "resco:entityTag": ["real estate developer", "offers", "olsztyn"]
 }
 ```
 
