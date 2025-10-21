@@ -25,6 +25,7 @@ First, we model an overall real estate project for apartment blocks on Sokola St
       "resco:entityName": "Apartment Blocks - Sokola Street",
       "resco:entityType": "Asset",
       "resco:entityTag": ["EKOBUD pbo", "housing", "olsztyn"],
+      "resco:hasMeasurement":"resco:Measurement/re_project_pr00001_price",
       "resco:hasCondition": "resco:Condition/real-estate-project-status"
     }
 }
@@ -40,6 +41,7 @@ We can then model each apartment unit for this particular project, including bot
   "resco:entityId": "re_project_pu00001",
   "resco:entityName": "Apartment Unit, Apartment Blocks - Sokola Street",
   "resco:entityType": "Asset",
+  "resco:hasMeasurement": "resco:Measurement/re_project_pu00001_price",
   "resco:entityTag": ["EKOBUD pbo", "housing", "olsztyn"],
   "resco:hasCondition": [
     "resco:Condition/real-estate-project-status",
