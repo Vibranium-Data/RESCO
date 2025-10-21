@@ -138,8 +138,8 @@
       "@id": "resco:generatedBy",
       "@type": "rdf:Property",
       "rdfs:domain": "resco:Measurement",
-      "rdfs:range": "resco:Entity",
-      "rdfs:comment": "Links a measurement to the Entity that generated it."
+      "rdfs:range": ["resco:Entity","resco:Event"],
+      "rdfs:comment": "Links a measurement to the Entity or Event that generated it."
     },
 
     {"_comment": "RESCO Indicator class properties"},
