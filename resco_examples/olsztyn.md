@@ -50,6 +50,20 @@ We can then model each apartment unit for this particular project, including bot
 }
 ```
 
+We can also model the developer of each real estate project as an Entity, with the entityType of real estate developer. RESCO's easy customization enables us to also extend our entity properties to include an entityAddress property for the developer's address.
+
+```json
+{
+  "@id": "resco:Entity/ekobud-pbo-2001",
+  "@type": "resco:Entity",
+  "resco:entityId": "ekobud-pbo-2001",
+  "resco:entityName": "Ekobud LLC PBO",
+  "resco:entityType": "Real Estate Developer",
+  "resco:entityAddress": "8 ul. Przemysłowa, Warmińsko-mazurskie,	Ostródzki,	Ostróda, Ostróda, 14-100",
+  "resco:entityTag": ["real estate developer", "bids", "olsztyn"]
+}
+```
+
 **Real Estate Prices as Measurements and Indicators**
 
 We can use Measurements to model real estate prices both at the project and unit level. We can use the generatedBy property in RESCO's Measurement class to show who is reporting or updating the price. An example from our dataset involving an offer price at the unit level for EKOBUD PBO for apartment blocks on Sokola Street would look like this:
