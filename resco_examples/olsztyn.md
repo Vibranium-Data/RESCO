@@ -152,7 +152,18 @@ We can also have more granular Conditions at the unit level that help with track
   "resco:conditionLabel": "Real Estate Project Construction Status",
   "resco:conditionTag": ["real estate project" "sokola street", "construction phases"],
   "resco:conditionValue": "Planning",
-  "resco:conditionOptions": ["Planning", "Plans Pending Approval", "Plans Approved", "Funds Released", "Construction Ongoing", "Structure Complete - Pending Finishes", "Structure and Finishes Complete", "Construction Complete - Pending Inspection", "Construction and Inspection Complete", "Construction Complete - Announced for Occupancy", "Construction Complete - Active Occupancy"],
+  "resco:conditionOptions": ["Planning",
+                            "Plans Pending Approval",
+                            "Plans Approved",
+                            "Funds Released",
+                            "Construction Ongoing",
+                            "Structure Complete - Pending Finishes",
+                            "Structure and Finishes Complete",
+                            "Construction Complete - Pending Inspection",
+                            "Construction and Inspection Complete",
+                            "Construction Complete - Announced for Occupancy",
+                            "Construction Complete - Active Occupancy"
+                            ],
   "resco:appliesTo": "resco:Entity/re_project_sokola_pu00001"
 }
 ```
