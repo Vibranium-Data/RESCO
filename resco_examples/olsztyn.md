@@ -119,7 +119,14 @@ We can use Conditions to track the each project or unit's status as the phases o
   "resco:conditionLabel": "Real Estate Project Overall Status",
   "resco:conditionTag": ["real estate project" "olsztyn", "construction phases"],
   "resco:conditionValue": "Planning",
-  "resco:conditionOptions": ["Bid Evaluation", "Developer Selected", "Planning", "In Construction", "Construction Complete", "Announced for Occupancy", "Active Occupancy"],
+  "resco:conditionOptions": ["Bid Evaluation",
+                            "Developer Selected",
+                            "Planning",
+                            "In Construction",
+                            "Construction Complete",
+                            "Announced for Occupancy",
+                            "Active Occupancy"
+                            ],
   "resco:appliesTo": "resco:Entity/re_project_sokola_pr00001"
 }
 ```
