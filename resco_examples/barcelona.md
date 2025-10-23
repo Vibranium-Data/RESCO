@@ -37,7 +37,7 @@ We can model the operational status of each ship as a Condition. This can help t
 {
   "@id": "resco:Condition/ship-operational-status",
   "@type": "resco:Condition",
-  "resco:conditionId": "ship-operational",
+  "resco:conditionId": "ship-operational-status",
   "resco:conditionLabel": "Operational",
   "resco:conditionOptions": [
     "Operational",
@@ -123,6 +123,24 @@ We can then model vessel turnaround times for each ship as Indicators. The Port 
     "resco:Measurement/ship-AMELAND-ETA",
     "resco:Measurement/ship-AMELAND-ETD"
   ],
-  "resco:indicatesCondition": "resco:Condition/ship-turnaround-time"
+  "resco:indicatesCondition": "resco:Condition/ship-turnaround-timeliness"
+}
+```
+
+We can also use Conditions to show the timeliness of each ship's turnaround.
+
+```json
+{
+  "@id": "resco:Condition/ship-turnaround-timeliness",
+  "@type": "resco:Condition",
+  "resco:conditionId": "ship-turnaround-timeliness",
+  "resco:conditionLabel": "Normal Turnaround",
+  "resco:conditionOptions": [
+    "Normal Turnaround",
+    "Above Average Turnaround",
+    "Late Turnaround",
+    "Delayed Turnaround"
+  ],
+  "resco:conditionTag": "normal"
 }
 ```
