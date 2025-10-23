@@ -164,3 +164,19 @@ We can then model the average turnaround timeliness to monitor timeliness across
   "resco:indicatesCondition": "resco:Condition/port-efficient"
 }
 ```
+
+We can then use the average turnaround time across the port to evaluate the port's efficiency.
+
+```json
+{
+  "@id": "resco:Condition/port-efficiency",
+  "@type": "resco:Condition",
+  "resco:conditionId": "port-efficiency",
+  "resco:conditionLabel": "Port Efficieny",
+  "resco:conditionOptions": [
+    "High Efficiency",
+    "Normal Efficiency",
+    "Efficiency Below SLA"
+  ]
+}
+```
