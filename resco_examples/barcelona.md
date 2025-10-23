@@ -107,3 +107,22 @@ Here, we use the unit of an epoch timestamp for the measurementValue.
   "resco:appliesTo": "resco:Entity/ship-AMELAND"
 }
 ```
+
+**Ship Turnaround Times as Indicators**
+
+We can then model vessel turnaround times for each ship as Indicators. The Port of Barcelona can then monitor and optimize ship turnaround times in accordance with service-level agreements and/or domestic policy.
+
+```json
+{
+  "@id": "resco:Indicator/turnaround-time-AMELAND-2025-10-21",
+  "@type": "resco:Indicator",
+  "resco:indicatorId": "turnaround-time-AMELAND-2025-10-21",
+  "resco:indicatorValue": 31.43,
+  "resco:indicatorUnit": "hours",
+  "resco:basedOnMeasurement": [
+    "resco:Measurement/ship-AMELAND-ETA",
+    "resco:Measurement/ship-AMELAND-ETD"
+  ],
+  "resco:indicatesCondition": "resco:Condition/ship-turnaround-time"
+}
+```
