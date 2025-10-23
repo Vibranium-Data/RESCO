@@ -23,8 +23,27 @@ We model each of the sea vessels that dock at the port as Entities, of entityTyp
       "resco:entityId": "9508794",
       "resco:entityName": "AMELAND",
       "resco:entityType": "Vessel",
-      "resco:entityTag": ["cargo", "port-of-barcelona", "netherlands"],
-      "resco:hasCondition": "resco:Condition/ship-operational"
+      "resco:entityTag": ["cargo ship", "port-of-barcelona", "netherlands"],
+      "resco:hasCondition": "resco:Condition/ship-operational-status"
     }
+}
+```
+
+**Ship Operation Status as Conditions**
+
+We can model the operational status of each ship as a Condition. This can help the port monitor and share information on whether the ship is functioning, and even in processing repair requests.
+
+```json
+{
+  "@id": "resco:Condition/ship-operational-status",
+  "@type": "resco:Condition",
+  "resco:conditionId": "ship-operational",
+  "resco:conditionLabel": "Operational",
+  "resco:conditionOptions": [
+    "Operational",
+    "Under Maintenance",
+    "Malfunctioning"
+  ],
+  "resco:conditionTag": "normal"
 }
 ```
