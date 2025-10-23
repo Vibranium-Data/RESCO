@@ -47,3 +47,19 @@ We can model the operational status of each ship as a Condition. This can help t
   "resco:conditionTag": "normal"
 }
 ```
+
+**Ship Arrivals and Departures as Events**
+
+We can model each ship's arrival and departure as Events in RESCO.
+
+```json
+{
+  "@id": "resco:Event/ship-arrival-2025-10-21",
+  "@type": "resco:Event",
+  "resco:eventId": "ship-arrival-2025-10-21",
+  "resco:involvedEntity": "resco:Entity/ship-AMELAND",
+  "resco:eventTime": "2025-10-21T11:34:00Z",
+  "resco:generatedByEvent": "resco:Entity/Port-of-Barcelona",
+  "resco:entityTag": ["arrival", "port-call", "eta"]
+}
+```
