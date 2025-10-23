@@ -38,7 +38,8 @@ We can model the operational status of each ship as a Condition. This can help t
   "@id": "resco:Condition/ship-operational-status",
   "@type": "resco:Condition",
   "resco:conditionId": "ship-operational-status",
-  "resco:conditionLabel": "Operational",
+  "resco:conditionLabel": "Ship Operational Status",
+  "resco:conditionValue": "Operational",
   "resco:conditionOptions": [
     "Operational",
     "Under Maintenance",
@@ -134,7 +135,8 @@ We can also use Conditions to show the timeliness of each ship's turnaround.
   "@id": "resco:Condition/ship-turnaround-timeliness",
   "@type": "resco:Condition",
   "resco:conditionId": "ship-turnaround-timeliness",
-  "resco:conditionLabel": "Normal Turnaround",
+  "resco:conditionLabel": "Ship Turnaround Timeliness",
+  "resco:conditionValue": "Normal Turnaround",
   "resco:conditionOptions": [
     "Normal Turnaround",
     "Above Average Turnaround",
@@ -161,7 +163,7 @@ We can then model the average turnaround timeliness to monitor timeliness across
     "resco:Indicator/turnaround-ARKLOW-FERN-2025-10-21",
     "resco:Indicator/turnaround-ATLANTIC-GENEVA-2025-10-22"
   ],
-  "resco:indicatesCondition": "resco:Condition/port-efficient"
+  "resco:indicatesCondition": "resco:Condition/port-efficiency"
 }
 ```
 
@@ -173,10 +175,33 @@ We can then use the average turnaround time across the port to evaluate the port
   "@type": "resco:Condition",
   "resco:conditionId": "port-efficiency",
   "resco:conditionLabel": "Port Efficieny",
+  "resco:conditionValue": "Normal Efficiency",
   "resco:conditionOptions": [
     "High Efficiency",
     "Normal Efficiency",
     "Efficiency Below SLA"
   ]
+}
+```
+
+**Optimizing Port Efficiency Using Interventions**
+
+The Port of Barcelona's administrators can then use Interventions to optimize the port's efficiency as needed. For example, if unloading is taking too long which is making turnaround times longer, the port administrators can temporarily reallocate cranes and berth assignments as needed for the delayed ships.
+
+```json
+{
+  "@id": "resco:Intervention/optimize-crane-allocation",
+  "@type": "resco:Intervention",
+  "resco:interventionId": "optimize-crane-allocation",
+  "resco:interventionLabel": "Optimize Crane Allocation",
+  "resco:interventionDescription": "Temporarily allocate additional cranes and adjust berth assignments to reduce vessel turnaround time.",
+  "resco:implementedBy": "resco:Entity/Port-of-Barcelona",
+  "resco:appliesTo": "resco:Entity/Port-of-Barcelona",
+  "resco:basedOnIndicator": "resco:Indicator/port-barcelona-avg-turnaround-2025-10-23",
+  "resco:currentEntityCondition": "resco:Condition/port-efficiency/normal-efficiency",
+  "resco:targetEntityCondition": "resco:Condition/port-efficiency/high-efficiency",
+  "resco:interventionStartTime": "2025-10-23T08:00:00Z",
+  "resco:interventionEndTime": "2025-10-23T16:00:00Z",
+  "resco:interventionOutcome": "Average turnaround reduced by 5 hours."
 }
 ```
