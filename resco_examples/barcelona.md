@@ -144,3 +144,23 @@ We can also use Conditions to show the timeliness of each ship's turnaround.
   "resco:conditionTag": "normal"
 }
 ```
+
+**Ship Turnaround Timeliness across the Port using Indicators**
+
+We can then model the average turnaround timeliness to monitor timeliness across the entire Port of Barcelona. We can then model this timeliness day-to-day, week-to-week, month-to-month and year-over-year. In this example, we include three ship-level Indicators to generate the port-level Indicator. We would include all the ship-level Indicators needed depending on the port and daily vessels.
+
+```json
+{
+  "@id": "resco:Indicator/port-barcelona-avg-turnaround-2025-10-23",
+  "@type": "resco:Indicator",
+  "resco:indicatorId": "port-barcelona-avg-turnaround-2025-10-23",
+  "resco:indicatorValue": 30.39,
+  "resco:indicatorUnit": "hours",
+  "resco:basedOnMeasurement": [
+    "resco:Indicator/turnaround-AMELAND-2025-10-21",
+    "resco:Indicator/turnaround-ARKLOW-FERN-2025-10-21",
+    "resco:Indicator/turnaround-ATLANTIC-GENEVA-2025-10-22"
+  ],
+  "resco:indicatesCondition": "resco:Condition/port-efficient"
+}
+```
