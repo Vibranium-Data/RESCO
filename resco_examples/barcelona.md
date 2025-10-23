@@ -63,3 +63,15 @@ We can model each ship's arrival and departure as Events in RESCO.
   "resco:entityTag": ["arrival", "port-call", "eta"]
 }
 ```
+
+```json
+{
+  "@id": "resco:Event/ship-departure-2025-10-22",
+  "@type": "resco:Event",
+  "resco:eventId": "ship-departure-2025-10-22",
+  "resco:involvedEntity": "resco:Entity/ship-AMELAND",
+  "resco:eventTime": "2025-10-22T19:00:00Z",
+  "resco:generatedByEvent": "resco:Entity/Port-of-Barcelona",
+  "resco:entityTag": ["departure", "port-call", "etd"]
+}
+```
