@@ -71,7 +71,7 @@ We can model each ship's arrival and departure as Events in RESCO.
   "resco:eventId": "ship-departure-2025-10-22",
   "resco:involvedEntity": "resco:Entity/ship-AMELAND",
   "resco:eventTime": "2025-10-22T19:00:00Z",
-  "resco:generatedByEvent": "resco:Entity/Port-of-Barcelona",
+  "resco:generatedBy": "resco:Entity/Port-of-Barcelona",
   "resco:entityTag": ["departure", "port-call", "etd"]
 }
 ```
@@ -86,11 +86,24 @@ Here, we use the unit of an epoch timestamp for the measurementValue.
 {
   "@id": "resco:Measurement/ship-ameland-ETA",
   "@type": "resco:Measurement",
-  "resco:measurementLabel": "Number of Customers affected",
+  "resco:measurementLabel": "Ship Arrival Time",
   "resco:measurementValue": 1761046440.0,
   "resco:measurementUnit": "seconds",
   "resco:measurementTime": "2025-10-21T11:34:00Z",
-  "resco:measuredBy": "resco:Entity/ship-AMELAND",
+  "resco:generatedBy": "resco:Entity/Port-of-Barcelona",
+  "resco:appliesTo": "resco:Entity/ship-AMELAND"
+}
+```
+
+```json
+{
+  "@id": "resco:Measurement/ship-ameland-ETD",
+  "@type": "resco:Measurement",
+  "resco:measurementLabel": "Ship Departure Time",
+  "resco:measurementValue": 1761159600.0,
+  "resco:measurementUnit": "seconds",
+  "resco:measurementTime": "2025-10-22T19:00:00Z",
+  "resco:generatedBy": "resco:Entity/Port-of-Barcelona",
   "resco:appliesTo": "resco:Entity/ship-AMELAND"
 }
 ```
