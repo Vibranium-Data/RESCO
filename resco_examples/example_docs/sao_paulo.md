@@ -2,7 +2,7 @@
 
 Domain: Energy
 
-Data source: [IPDO-ONS Balance of Energy Reports](./data_sources/brazil_IPDO-22-09-2025.pdf)
+Data source: [IPDO-ONS Balance of Energy Reports](../data_sources/brazil_IPDO-22-09-2025.pdf)
 
 ### 1. Sao Paulo and Rio de Janeiro Grid Energy Supply
 
