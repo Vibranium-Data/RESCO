@@ -184,7 +184,7 @@ With relative humidity Measurements across Singapore from each weather station, 
 
 ---
 
-## Example 2 - Traffic Images in RESCO
+## Singapore - Traffic Images in RESCO
 
 Domain: Mobility, Security
 
