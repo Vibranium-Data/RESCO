@@ -44,7 +44,9 @@ RESCO defines a small but powerful set of classes to represent infrastructure, o
 
 ---
 
-## Example: Sensors in RESCO
+## Example: Sensors in RESCO - New York City
+
+_You can view more examples across various cities [here](/RESCO/resco_examples/readme.md)_
 
 Sensors are treated as **Entities** that generate **Measurements**.  
 Entities would have **entityType** as **"Sensor"**
@@ -68,11 +70,10 @@ Examples of sensors include:
   "resco:hasMeasurement": {
     "@id": "resco:Measurement/nyc-sensor-001-pm25",
     "@type": "resco:Measurement",
-    "resco:measurementLabel": "e.g. PM2.5 concentration (µg/m³)",
+    "resco:measurementLabel": "PM2.5 concentration (µg/m³)",
     "resco:measurementValue": 12.3,
     "resco:measurementUnit": "µg/m³",
-    "resco:measurementTimestamp": "2025-09-09T08:30:00Z",
-    "resco:measurementLabel": "e.g. PM2.5 concentration (µg/m³)"
+    "resco:measurementTimestamp": "2025-09-09T08:30:00Z"
   }
 }
 ```
