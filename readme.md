@@ -42,7 +42,7 @@ RESCO defines a small but powerful set of classes to represent infrastructure, o
    - Maps to existing frameworks such as SOSA/SSN and NGSI-LD.
    - Provides a lightweight entry point for practitioners while staying interoperable with other ontologies.
 
-You can view the entire RESCO specification [here](/RESCO.jdonld).
+You can view the entire RESCO specification [here](/RESCO.jsonld).
 
 ---
 
