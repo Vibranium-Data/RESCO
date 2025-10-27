@@ -46,7 +46,7 @@ RESCO defines a small but powerful set of classes to represent infrastructure, o
 
 ## Example: Sensors in RESCO - New York City
 
-_You can view more examples across various cities [here](/RESCO/resco_examples/readme.md)_
+_More city examples: You can view more examples across various cities and domains [here](/resco_examples/readme.md)._
 
 Sensors are treated as **Entities** that generate **Measurements**.  
 Entities would have **entityType** as **"Sensor"**
