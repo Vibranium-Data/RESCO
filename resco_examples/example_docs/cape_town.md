@@ -258,3 +258,19 @@ We model each service request as an Event. We can model grid faults or other kin
   "resco:generatedByEvent": "resco:Entity/parklands"
 }
 ```
+
+**Service Statuses as Conditions**
+
+We can model the status of each service request as a Condition, indicating whether the stated service request is still pending, whether service is ongoing, or whether the service request has been completed and closed. We can then match each Condition to its associated Event or vice versa - have Conditions for each Event. Here, we show a mapping of the Condition to the Event in the previous service request for broken leading in the water system.
+
+```json
+{
+  "@id": "resco:Condition/service-status",
+  "@type": "resco:Condition",
+  "resco:conditionLabel": "Service Request Status",
+  "resco:conditionValue": "Ccomplete",
+  "resco:conditionOptions": ["Pending", "Service Ongoing", "Completed"],
+  "resco:conditionTag": "Service Request Statuses",
+  "resco:appliesTo": "resco:Event/ervice-request-1022678316"
+}
+```
