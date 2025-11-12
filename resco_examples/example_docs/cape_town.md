@@ -240,3 +240,21 @@ Each organization or department that responds to city service requests across Ca
   "resco:entityTag": ["water systems", "Cape Town"]
 }
 ```
+
+**Service Requests as Events**
+
+We model each service request as an Event. We can model grid faults or other kinds of power disruptions as Events, indicating their type using the eventType property with each Event as needed. Beyond the standard Event properties, we can also add custom properties to RESCO that are beneficial to operators, reporting teams or responders as needed.
+
+```json
+{
+  "@id": "resco:Event/service-request-1022678316",
+  "@type": "resco:Event",
+  "resco:eventId": "sr-1022678316",
+  "resco:eventType": "WAT: Broken Leading",
+  "resco:eventTime": "2025-10-06T11:10:15Z",
+  "resco:involvedEntity": ["resco:Entity/killarney-water"],
+  "resco:entityLocation": { "lon": "33.8133", "lat": "18.5003" },
+  "resco:eventTag": ["Water", "Leading", "Unplanned"],
+  "resco:generatedByEvent": "resco:Entity/parklands"
+}
+```
