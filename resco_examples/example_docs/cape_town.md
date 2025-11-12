@@ -223,8 +223,6 @@ Domain: Public Works, City Public Services (Water, Sanitation, Energy, Infrastru
 
 Data source: [City of Cape Town Service Requests Dataset](https://odp-cctegis.opendata.arcgis.com/datasets/cctegis::service-requests/explore)
 
-### 1. Cape Town City Organizations and Departments as Entities
-
 **Organization or Department as Entity**
 
 Each organization or department that responds to city service requests across Cape Town is modeled an Entity. Each department or organization corresponds to the work center that the request is routed to for their staff to respond to the service request. Here, we model the organization in charge of water systems, Killarney Water, as an Entity.
@@ -237,6 +235,8 @@ Each organization or department that responds to city service requests across Ca
   },
   "@id": "resco:Entity/killarney-water",
   "@type": "resco:Entity",
-  "resco:entityType": "Depot Dispatch Killarney Water"
+  "resco:entityType": "Organization",
+  "resco:entityName": "Depot Dispatch Killarney Water",
+  "resco:entityTag": ["water systems", "Cape Town"]
 }
 ```
