@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+  - family-names: Kamau
+    given-names: Samuel
+title: "RESCO: Reduced Set City Ontology"
+version: "v0.1.0" # or the current version
+date-released: "2025-11-12" # or actual release date
+repository-code: "https://github.com/Vibranium-Data/RESCO"
