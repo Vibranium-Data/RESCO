@@ -2,4 +2,4 @@
 
 - Initial release of the RESCO ontology
 - Added core entities and relationships
-- Included documentation and examples
+- Included documentation with examples
