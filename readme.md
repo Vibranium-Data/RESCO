@@ -128,5 +128,6 @@ Examples of sensors include:
 
 ## License
 
-RESCO is licensed under the GNU General Public License v3.0 (GPL-3.0).
+RESCO is licensed under the MIT License.
 See the [LICENSE](./LICENSE) file for details.
+© 2025 Vibranium Data, Samuel Kamau
