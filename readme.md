@@ -130,4 +130,5 @@ Examples of sensors include:
 
 RESCO is licensed under the MIT License.
 See the [LICENSE](./LICENSE) file for details.
+
 © 2025 Vibranium Data, Samuel Kamau
