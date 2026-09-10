@@ -274,3 +274,4 @@ We can model the status of each service request as a Condition, indicating wheth
   "resco:appliesTo": "resco:Event/ervice-request-1022678316"
 }
 ```
+
