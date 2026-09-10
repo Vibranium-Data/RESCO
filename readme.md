@@ -29,11 +29,11 @@ The goal is not to eliminate local differences. It is to provide a stable semant
 
 This supports five practical objectives:
 
-- **Interoperability** - provide shared semantics across heterogeneous urban datasets and systems.
-- **Reusability** - allow data models and analytical patterns to be reused across projects and jurisdictions.
-- **Reproducibility** — make the structure behind urban analyses easier to inspect and reproduce.
-- **Replicability** — make it easier to test comparable workflows, indicators, and interventions in other cities.
-- **System-wide monitoring** — connect observations, interpreted system state, events, and actions in a common model.
+- **Interoperability**: provide shared semantics across heterogeneous urban datasets and systems.
+- **Reusability**: allow data models and analytical patterns to be reused across projects and jurisdictions.
+- **Reproducibility**: make the structure behind urban analyses easier to inspect and reproduce.
+- **Replicability**: make it easier to test comparable workflows, indicators, and interventions in other cities.
+- **System-wide monitoring**: connect observations, interpreted system state, events, and actions in a common model.
 
 ---
 
