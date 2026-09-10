@@ -2,6 +2,12 @@
 
 **An open-source, practitioner-first ontology for interoperable urban data, city monitoring, and cross-city learning.**
 
+<p align="center">
+  <img src="assets/resco_github_image.png"
+       alt="RESCO: Reduced Set City Ontology"
+       width="100%">
+</p>
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Format: JSON-LD](https://img.shields.io/badge/Format-JSON--LD-lightgrey.svg)](RESCO.jsonld)
 
