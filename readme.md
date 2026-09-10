@@ -11,7 +11,7 @@ RESCO is designed for practitioners, researchers, and developers who need to int
 
 > **RESCO does not try to standardize the city. It standardizes enough of the language we use to observe one.**
 
-**Quick links:** [Specification](RESCO.jsonld) · [City examples](resco_examples/) · [Citation](citation.cff) · [Changelog](CHANGELOG.md) · [License](LICENSE)
+**Quick links:** [Specification](RESCO.jsonld) · [Research Paper](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7376919) · [Blog Post](https://vibraniumdb.com/research/resco) · [City examples](resco_examples/) · [Citation](citation.cff) · [Changelog](CHANGELOG.md) · [License](LICENSE)
 
 ---
 
